@@ -3,7 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { SkillBadge } from "@/components/ui/SkillBadge";
 import { portfolioData } from "@/data/portfolio";
-import { Layout, Terminal, Wrench, Palette } from "lucide-react";
+import { Layout, Wrench, Palette } from "lucide-react";
 
 export function Skills() {
   const getCategoryIcon = (index: number) => {
@@ -11,13 +11,11 @@ export function Skills() {
       case 0:
         return <Layout className="w-5 h-5 text-sky-500" />;
       case 1:
-        return <Terminal className="w-5 h-5 text-sky-500" />;
-      case 2:
         return <Wrench className="w-5 h-5 text-sky-500" />;
-      case 3:
+      case 2:
         return <Palette className="w-5 h-5 text-sky-500" />;
       default:
-        return <Terminal className="w-5 h-5 text-sky-500" />;
+        return <Layout className="w-5 h-5 text-sky-500" />;
     }
   };
 
@@ -26,15 +24,15 @@ export function Skills() {
       <Container>
         <SectionHeader
           label="02 // Skills"
-          title="Technical Competencies"
-          description="Technologies, languages, and tools I utilize across coursework and independent software projects."
+          title="Skills &amp; Technologies"
+          description="A focused set of languages, frameworks, developer tools, and creative software I actively use in my projects."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {portfolioData.skillCategories.map((category, idx) => (
             <div
               key={category.title}
-              className="flex flex-col justify-between p-6 sm:p-7 rounded-xl bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 transition-colors shadow-sm"
+              className="flex flex-col justify-between p-6 sm:p-7 rounded-xl bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 transition-all duration-150 hover:border-sky-500/40 dark:hover:border-sky-400/40 shadow-sm"
             >
               <div>
                 <div className="flex items-center gap-3 mb-3">
@@ -45,13 +43,13 @@ export function Skills() {
                     {category.title}
                   </h3>
                 </div>
-                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mb-6">
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
                   {category.description}
                 </p>
               </div>
 
               {/* Skills Tags */}
-              <div className="flex flex-wrap gap-2 pt-2">
+              <div className="flex flex-wrap gap-2 pt-2 border-t border-slate-100 dark:border-slate-800/80">
                 {category.skills.map((skill) => (
                   <SkillBadge key={skill.name} skill={skill} />
                 ))}

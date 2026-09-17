@@ -2,6 +2,8 @@ export interface Project {
   id: string;
   title: string;
   description: string;
+  highlight?: string;
+  featured?: boolean;
   techStack: string[];
   githubUrl: string;
   liveUrl: string;

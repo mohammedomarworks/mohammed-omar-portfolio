@@ -47,14 +47,18 @@ export function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-200 ${
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           scrolled
-            ? "bg-slate-50/90 dark:bg-[#090d16]/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-sm"
+            ? "bg-slate-50/95 dark:bg-[#090d16]/95 backdrop-blur-md border-b border-slate-200/90 dark:border-slate-800 shadow-sm"
             : "bg-transparent border-b border-transparent"
         }`}
       >
         <Container>
-          <div className="flex items-center justify-between h-16 sm:h-18">
+          <div
+            className={`flex items-center justify-between transition-all duration-300 ${
+              scrolled ? "h-14 sm:h-15" : "h-18 sm:h-20"
+            }`}
+          >
             {/* Logo / Personal Brand */}
             <a
               href="#hero"
