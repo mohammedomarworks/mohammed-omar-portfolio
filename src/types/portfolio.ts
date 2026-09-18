@@ -7,6 +7,7 @@ export interface Project {
   techStack: string[];
   githubUrl: string;
   liveUrl: string;
+  liveButtonLabel?: string;
   image?: string;
   category?: string;
 }

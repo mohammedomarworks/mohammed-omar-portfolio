@@ -3,9 +3,8 @@
 import React from "react";
 import { Container } from "@/components/ui/Container";
 import { portfolioData } from "@/data/portfolio";
-import { ArrowUp } from "lucide-react";
+import { ArrowUp, Mail, Heart } from "lucide-react";
 import { Github, Linkedin } from "@/components/ui/Icons";
-import { Mail } from "lucide-react";
 
 const FOOTER_LINKS = [
   { label: "Home", href: "#hero" },
@@ -97,8 +96,10 @@ export function Footer() {
         {/* Copyright */}
         <div className="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
           <p>© {new Date().getFullYear()} {portfolioData.name}. All rights reserved.</p>
-          <p className="font-mono text-[11px]">
-            Personal Engineering Portfolio • Daffodil International University
+          <p className="inline-flex items-center gap-1.5 font-mono text-[11px] text-slate-500 dark:text-slate-400">
+            <span>Made with</span>
+            <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500 shrink-0" aria-hidden="true" />
+            <span>by {portfolioData.name}</span>
           </p>
         </div>
       </Container>

@@ -193,10 +193,10 @@ export function ProjectCard({ project, isFeaturedLayout = false }: ProjectCardPr
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`View live demo for ${project.title}`}
+                aria-label={project.liveButtonLabel ? `${project.liveButtonLabel} for ${project.title}` : `View live demo for ${project.title}`}
                 className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-500 transition-colors focus-visible:ring-2 focus-visible:ring-indigo-500 shadow-sm shadow-indigo-600/20"
               >
-                <span>Live Demo</span>
+                <span>{project.liveButtonLabel || "Live Demo"}</span>
                 <ExternalLink className="w-4 h-4" />
               </a>
             ) : (
@@ -308,10 +308,10 @@ export function ProjectCard({ project, isFeaturedLayout = false }: ProjectCardPr
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`View live demo for ${project.title}`}
+              aria-label={project.liveButtonLabel ? `${project.liveButtonLabel} for ${project.title}` : `View live demo for ${project.title}`}
               className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-500 transition-colors focus-visible:ring-2 focus-visible:ring-indigo-500 shadow-sm shadow-indigo-600/20"
             >
-              <span>Live Demo</span>
+              <span>{project.liveButtonLabel || "Live Demo"}</span>
               <ExternalLink className="w-3.5 h-3.5" />
             </a>
           ) : (

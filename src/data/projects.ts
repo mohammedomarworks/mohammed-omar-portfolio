@@ -13,13 +13,14 @@ export const projectsData: Project[] = [
     id: "sidraessentials",
     title: "Sidra Essentials",
     description:
-      "[Project description placeholder — to be provided. Add your overview of Sidra Essentials, features, and workflow here.]",
-    highlight: "Primary featured project showcasing end-to-end web storefront architecture.",
+      "A client e-commerce storefront website built with Next.js, TypeScript, and Tailwind CSS, featuring product catalog browsing, responsive navigation, and streamlined order checkout.",
+    highlight: "Client storefront project delivering product catalog browsing, responsive cart, and modern web interface design.",
     featured: true,
     techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
     githubUrl: "https://github.com/mohammedomarworks", // <-- PLACEHOLDER: Replace with specific repository URL when published
     liveUrl: "https://sidraessentials.vercel.app/",
-    category: "Featured Storefront",
+    liveButtonLabel: "Visit Website",
+    category: "Client Project",
   },
   {
     id: "studyflow",
