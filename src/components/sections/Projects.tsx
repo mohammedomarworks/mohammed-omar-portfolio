@@ -6,11 +6,11 @@ import { portfolioData } from "@/data/portfolio";
 
 export function Projects() {
   return (
-    <section id="projects" className="py-20 sm:py-28 border-t border-slate-200/80 dark:border-slate-800/80">
+    <section id="projects" className="py-20 sm:py-28 border-t border-zinc-200/80 dark:border-zinc-800/80">
       <Container>
         <SectionHeader
-          label="03 // Featured Projects"
-          title="Selected Engineering Projects"
+          label="Projects"
+          title="Featured Projects"
           description="Projects designed to explore real problems, university workflows, and responsive web systems."
         />
 

@@ -3,35 +3,35 @@
 @tailwind utilities;
 
 :root {
-  /* Light Theme variables (clean, architectural, crisp contrast) */
-  --background: #f8fafc;
-  --foreground: #0f172a;
+  /* Light Theme variables (Warm off-white, personal creative developer aesthetic) */
+  --background: #faf9f6;
+  --foreground: #18181b;
   --surface-50: #ffffff;
-  --surface-100: #f1f5f9;
-  --surface-200: #e2e8f0;
-  --surface-800: #1e293b;
-  --surface-900: #0f172a;
-  --surface-950: #020617;
-  --border-color: #e2e8f0;
-  --accent: #0284c7;
+  --surface-100: #f4f4f5;
+  --surface-200: #e4e4e7;
+  --surface-800: #27272a;
+  --surface-900: #18181b;
+  --surface-950: #09090b;
+  --border-color: #e4e4e7;
+  --accent: #4f46e5;
   --accent-foreground: #ffffff;
-  --accent-muted: #e0f2fe;
+  --accent-muted: rgba(79, 70, 229, 0.08);
 }
 
 .dark {
-  /* Dark Theme variables (Engineering minimal dark aesthetic, primary theme) */
-  --background: #090d16;
-  --foreground: #f1f5f9;
-  --surface-50: #111827;
-  --surface-100: #161f30;
-  --surface-200: #1e293b;
-  --surface-800: #0f172a;
-  --surface-900: #0b0f19;
-  --surface-950: #050811;
-  --border-color: #1e293b;
-  --accent: #38bdf8;
-  --accent-foreground: #040812;
-  --accent-muted: rgba(56, 189, 248, 0.12);
+  /* Dark Theme variables */
+  --background: #0d0f17;
+  --foreground: #f4f4f5;
+  --surface-50: #161926;
+  --surface-100: #1c2132;
+  --surface-200: #262c43;
+  --surface-800: #161926;
+  --surface-900: #0f111a;
+  --surface-950: #08090f;
+  --border-color: #242a40;
+  --accent: #6366f1;
+  --accent-foreground: #ffffff;
+  --accent-muted: rgba(99, 102, 241, 0.15);
 }
 
 html {

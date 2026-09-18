@@ -9,47 +9,47 @@ export function Skills() {
   const getCategoryIcon = (index: number) => {
     switch (index) {
       case 0:
-        return <Layout className="w-5 h-5 text-sky-500" />;
+        return <Layout className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />;
       case 1:
-        return <Wrench className="w-5 h-5 text-sky-500" />;
+        return <Wrench className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />;
       case 2:
-        return <Palette className="w-5 h-5 text-sky-500" />;
+        return <Palette className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />;
       default:
-        return <Layout className="w-5 h-5 text-sky-500" />;
+        return <Layout className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />;
     }
   };
 
   return (
-    <section id="skills" className="py-20 sm:py-28 border-t border-slate-200/80 dark:border-slate-800/80 bg-slate-50/50 dark:bg-slate-950/30">
+    <section id="skills" className="py-20 sm:py-28 border-t border-zinc-200/80 dark:border-zinc-800/80">
       <Container>
         <SectionHeader
-          label="02 // Skills"
-          title="Skills &amp; Technologies"
-          description="A focused set of languages, frameworks, developer tools, and creative software I actively use in my projects."
+          label="Skills"
+          title="Skills &amp; Abilities"
+          description="A focused toolkit of frontend technologies, software engineering tools, and creative applications I actively work with."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {portfolioData.skillCategories.map((category, idx) => (
             <div
               key={category.title}
-              className="flex flex-col justify-between p-6 sm:p-7 rounded-xl bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 transition-all duration-150 hover:border-sky-500/40 dark:hover:border-sky-400/40 shadow-sm"
+              className="flex flex-col justify-between p-6 sm:p-7 rounded-2xl bg-white dark:bg-zinc-900/90 border border-zinc-200/80 dark:border-zinc-800 transition-all duration-200 hover:border-indigo-300 dark:hover:border-indigo-700 hover:shadow-md shadow-sm"
             >
               <div>
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="p-2 rounded-lg bg-sky-500/10">
+                  <div className="w-10 h-10 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-100 dark:border-indigo-900/40 flex items-center justify-center">
                     {getCategoryIcon(idx)}
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">
+                  <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">
                     {category.title}
                   </h3>
                 </div>
-                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 mb-6 leading-relaxed">
                   {category.description}
                 </p>
               </div>
 
               {/* Skills Tags */}
-              <div className="flex flex-wrap gap-2 pt-2 border-t border-slate-100 dark:border-slate-800/80">
+              <div className="flex flex-wrap gap-2 pt-4 border-t border-zinc-100 dark:border-zinc-800/80">
                 {category.skills.map((skill) => (
                   <SkillBadge key={skill.name} skill={skill} />
                 ))}

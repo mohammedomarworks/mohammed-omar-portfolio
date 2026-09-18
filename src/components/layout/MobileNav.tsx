@@ -58,16 +58,16 @@ export function MobileNav({
         aria-hidden="true"
       />
 
-      <div className="relative z-10 flex flex-col h-full bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 p-6 shadow-2xl">
-        <div className="flex items-center justify-between pb-6 border-b border-slate-200 dark:border-slate-800">
-          <div className="flex items-center gap-2 text-slate-900 dark:text-slate-100 font-semibold tracking-tight">
-            <span className="font-mono text-sky-500 font-bold">&lt;MO&gt;</span>
-            <span className="text-sm font-bold tracking-tight">Mohammed Omar</span>
+      <div className="relative z-10 flex flex-col h-full bg-[#faf9f6] dark:bg-[#0d0f17] border-b border-zinc-200 dark:border-zinc-800 p-6 shadow-2xl">
+        <div className="flex items-center justify-between pb-6 border-b border-zinc-200 dark:border-zinc-800">
+          <div className="flex items-center gap-1.5 text-zinc-900 dark:text-zinc-100 font-bold tracking-tight">
+            <span className="text-lg tracking-tight font-extrabold font-mono">OMAR</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-indigo-600 dark:bg-indigo-400" />
           </div>
           <button
             onClick={onClose}
             aria-label="Close navigation menu"
-            className="p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors focus-visible:ring-2 focus-visible:ring-sky-500"
+            className="p-2 rounded-lg text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-200/60 dark:hover:bg-zinc-800 transition-colors focus-visible:ring-2 focus-visible:ring-indigo-500"
           >
             <X className="w-5 h-5" />
           </button>
@@ -75,7 +75,7 @@ export function MobileNav({
 
         {/* Navigation list */}
         <nav className="flex-1 py-8">
-          <ul className="flex flex-col space-y-4">
+          <ul className="flex flex-col space-y-3">
             {links.map((link) => {
               const isActive = activeSection === link.href.replace("#", "");
               return (
@@ -85,8 +85,8 @@ export function MobileNav({
                     onClick={onClose}
                     className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
                       isActive
-                        ? "bg-sky-500/10 text-sky-600 dark:text-sky-400 font-semibold"
-                        : "text-slate-700 dark:text-slate-300 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:text-slate-900 dark:hover:text-slate-100"
+                        ? "bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400 font-semibold"
+                        : "text-zinc-700 dark:text-zinc-300 hover:bg-zinc-200/50 dark:hover:bg-zinc-800/50 hover:text-zinc-900 dark:hover:text-zinc-100"
                     }`}
                   >
                     {link.label}
@@ -97,7 +97,7 @@ export function MobileNav({
           </ul>
         </nav>
 
-        <div className="pt-6 border-t border-slate-200 dark:border-slate-800 text-xs font-mono text-slate-500 text-center">
+        <div className="pt-6 border-t border-zinc-200 dark:border-zinc-800 text-xs font-mono text-zinc-500 text-center">
           Software Engineering • Daffodil International University
         </div>
       </div>

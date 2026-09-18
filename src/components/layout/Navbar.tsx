@@ -10,8 +10,8 @@ const NAV_LINKS = [
   { label: "Home", href: "#hero" },
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
   { label: "Education", href: "#education" },
+  { label: "Projects", href: "#projects" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -49,7 +49,7 @@ export function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           scrolled
-            ? "bg-slate-50/95 dark:bg-[#090d16]/95 backdrop-blur-md border-b border-slate-200/90 dark:border-slate-800 shadow-sm"
+            ? "bg-[#faf9f6]/95 dark:bg-[#0d0f17]/95 backdrop-blur-md border-b border-zinc-200/80 dark:border-zinc-800 shadow-sm"
             : "bg-transparent border-b border-transparent"
         }`}
       >
@@ -59,17 +59,15 @@ export function Navbar() {
               scrolled ? "h-14 sm:h-15" : "h-18 sm:h-20"
             }`}
           >
-            {/* Logo / Personal Brand */}
+            {/* Logo / Personal Brand: OMAR */}
             <a
               href="#hero"
-              className="group flex items-center gap-2 text-slate-900 dark:text-slate-100 font-semibold tracking-tight focus-visible:ring-2 focus-visible:ring-sky-500 rounded-md p-1"
+              className="group flex items-center gap-1.5 text-zinc-900 dark:text-zinc-100 font-bold tracking-tight focus-visible:ring-2 focus-visible:ring-indigo-500 rounded-md p-1"
             >
-              <span className="font-mono text-sky-500 group-hover:text-sky-400 transition-colors">
-                &lt;MO&gt;
+              <span className="text-xl tracking-tight font-extrabold font-mono">
+                OMAR
               </span>
-              <span className="text-base font-bold tracking-tight">
-                Mohammed Omar
-              </span>
+              <span className="w-1.5 h-1.5 rounded-full bg-indigo-600 dark:bg-indigo-400 group-hover:scale-125 transition-transform" />
             </a>
 
             {/* Desktop Navigation Links */}
@@ -82,8 +80,8 @@ export function Navbar() {
                     href={link.href}
                     className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
                       isActive
-                        ? "text-sky-600 dark:text-sky-400 bg-sky-500/10 font-semibold"
-                        : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800/60"
+                        ? "text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/50 font-semibold"
+                        : "text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800/60"
                     }`}
                   >
                     {link.label}
@@ -100,7 +98,7 @@ export function Navbar() {
                 type="button"
                 onClick={() => setMobileMenuOpen(true)}
                 aria-label="Open navigation menu"
-                className="md:hidden p-2 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 focus-visible:ring-2 focus-visible:ring-sky-500"
+                className="md:hidden p-2 rounded-lg border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 focus-visible:ring-2 focus-visible:ring-indigo-500"
               >
                 <Menu className="w-5 h-5" />
               </button>

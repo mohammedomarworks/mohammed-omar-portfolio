@@ -49,5 +49,6 @@ export interface SiteData {
   socialLinks: SocialLink[];
   education: EducationItem;
   skillCategories: SkillCategory[];
+  currentlyLearning: string[];
   projects: Project[];
 }

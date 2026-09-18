@@ -13,7 +13,7 @@ export const portfolioData: SiteData = {
   name: "Mohammed Omar",
   title: "Software Engineering Student",
   university: "Daffodil International University",
-  tagline: "Building practical software, experimenting with creative technology, and learning through real projects.",
+  tagline: "I'm a Software Engineering student at Daffodil International University, building practical software projects while exploring web development, animation, and 3D.",
 
   // About Section Content
   bio: [
@@ -98,6 +98,14 @@ export const portfolioData: SiteData = {
         { name: "Animation" },
       ],
     },
+  ],
+
+  // Currently Learning (Continuous student skill development)
+  currentlyLearning: [
+    "Web Development",
+    "Animation",
+    "3D Development",
+    "Software Engineering",
   ],
 
   // Featured Projects (Imported from dedicated projects.ts)
