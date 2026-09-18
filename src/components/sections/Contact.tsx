@@ -28,17 +28,17 @@ export function Contact() {
       <Container>
         <SectionHeader
           label="Contact"
-          title="Get in Touch"
-          description="Open for software engineering projects, student collaborations, and technical discussions."
+          title="Let's Connect"
+          description="I'm always interested in learning, building, and connecting through meaningful projects."
         />
 
         <div className="max-w-3xl mx-auto">
           <div className="rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 p-6 sm:p-10 shadow-sm">
             <h3 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-slate-100 mb-3 tracking-tight">
-              Let&apos;s build something.
+              Let&apos;s Connect
             </h3>
             <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-8 leading-relaxed max-w-2xl">
-              I welcome opportunities to discuss software engineering projects, collaborate on web applications and creative experiments, and learn together. Feel free to reach out directly or connect through my profiles below.
+              I&apos;m always interested in learning, building, and connecting through meaningful projects.
             </p>
 
             {/* Email Action Box */}
