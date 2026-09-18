@@ -6,7 +6,7 @@ import { portfolioData } from "@/data/portfolio";
 
 export function Projects() {
   return (
-    <section id="projects" className="py-20 sm:py-28 border-t border-zinc-200/80 dark:border-zinc-800/80">
+    <section id="projects" className="py-20 sm:py-28 border-t border-slate-200/80 dark:border-slate-800/80">
       <Container>
         <SectionHeader
           label="Projects"

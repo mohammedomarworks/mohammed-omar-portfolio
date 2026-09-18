@@ -17,7 +17,7 @@ export const projectsData: Project[] = [
     highlight: "Campus verification and escrow transaction model.",
     featured: true,
     techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
-    githubUrl: "https://github.com/mohammedomarworks", // <-- PLACEHOLDER: Links to GitHub profile. Update with specific repo URL when published.
+    githubUrl: "https://github.com/mohammedomarworks", // <-- PLACEHOLDER: Replace with specific repository URL when published
     liveUrl: "", // <-- PLACEHOLDER: Add live demo URL when deployed
     category: "Campus Platform",
   },
@@ -44,14 +44,14 @@ export const projectsData: Project[] = [
     category: "Business System",
   },
   {
-    id: "sidraessentials",
-    title: "SidraEssentials",
+    id: "birthday-animation",
+    title: "Interactive Birthday Animation",
     description:
-      "An e-commerce bag store interface featuring product catalog filtering, interactive cart management, responsive item showcases, and a checkout layout.",
+      "A browser-based interactive animation experiment combining canvas rendering, smooth timing curves, and DOM motion physics.",
     featured: false,
-    techStack: ["React", "Next.js", "Tailwind CSS"],
-    githubUrl: "https://github.com/mohammedomarworks", // <-- PLACEHOLDER: Links to GitHub profile. Update with specific repo URL when published.
+    techStack: ["JavaScript", "HTML5 Canvas", "CSS Motion"],
+    githubUrl: "https://github.com/mohammedomarworks", // <-- PLACEHOLDER: Replace with specific repository URL when published
     liveUrl: "", // <-- PLACEHOLDER: Add live demo URL when deployed
-    category: "E-Commerce",
+    category: "Creative & Motion",
   },
 ];

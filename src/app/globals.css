@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 :root {
-  /* Light Theme variables (Warm off-white, personal creative developer aesthetic) */
-  --background: #faf9f6;
-  --foreground: #18181b;
+  /* Clean White/Light Theme variables */
+  --background: #ffffff;
+  --foreground: #0f172a;
   --surface-50: #ffffff;
-  --surface-100: #f4f4f5;
-  --surface-200: #e4e4e7;
-  --surface-800: #27272a;
-  --surface-900: #18181b;
-  --surface-950: #09090b;
-  --border-color: #e4e4e7;
+  --surface-100: #f8fafc;
+  --surface-200: #f1f5f9;
+  --surface-800: #1e293b;
+  --surface-900: #0f172a;
+  --surface-950: #020617;
+  --border-color: #e2e8f0;
   --accent: #4f46e5;
   --accent-foreground: #ffffff;
   --accent-muted: rgba(79, 70, 229, 0.08);
@@ -20,15 +20,15 @@
 
 .dark {
   /* Dark Theme variables */
-  --background: #0d0f17;
-  --foreground: #f4f4f5;
-  --surface-50: #161926;
-  --surface-100: #1c2132;
-  --surface-200: #262c43;
-  --surface-800: #161926;
-  --surface-900: #0f111a;
-  --surface-950: #08090f;
-  --border-color: #242a40;
+  --background: #090d16;
+  --foreground: #f8fafc;
+  --surface-50: #111827;
+  --surface-100: #172033;
+  --surface-200: #1e293b;
+  --surface-800: #111827;
+  --surface-900: #090d16;
+  --surface-950: #030712;
+  --border-color: #1e293b;
   --accent: #6366f1;
   --accent-foreground: #ffffff;
   --accent-muted: rgba(99, 102, 241, 0.15);
@@ -49,11 +49,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Accessible focus styling */
+/* Accessible focus styling using consistent accent */
 :focus-visible {
-  outline: 2px solid #38bdf8;
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
 /* Accessibility: Respect Reduced Motion */

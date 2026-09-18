@@ -49,7 +49,7 @@ export function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           scrolled
-            ? "bg-[#faf9f6]/95 dark:bg-[#0d0f17]/95 backdrop-blur-md border-b border-zinc-200/80 dark:border-zinc-800 shadow-sm"
+            ? "bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 shadow-sm"
             : "bg-transparent border-b border-transparent"
         }`}
       >
@@ -62,7 +62,7 @@ export function Navbar() {
             {/* Logo / Personal Brand: OMAR */}
             <a
               href="#hero"
-              className="group flex items-center gap-1.5 text-zinc-900 dark:text-zinc-100 font-bold tracking-tight focus-visible:ring-2 focus-visible:ring-indigo-500 rounded-md p-1"
+              className="group flex items-center gap-1.5 text-slate-900 dark:text-white font-bold tracking-tight focus-visible:ring-2 focus-visible:ring-indigo-500 rounded-md p-1"
             >
               <span className="text-xl tracking-tight font-extrabold font-mono">
                 OMAR

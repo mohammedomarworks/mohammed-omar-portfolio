@@ -13,12 +13,12 @@ export const portfolioData: SiteData = {
   name: "Mohammed Omar",
   title: "Software Engineering Student",
   university: "Daffodil International University",
-  tagline: "I'm a Software Engineering student at Daffodil International University, building practical software projects while exploring web development, animation, and 3D.",
+  tagline: "I build practical software projects while exploring web development, animation, and 3D development.",
 
   // About Section Content
   bio: [
-    "I am a Software Engineering student at Daffodil International University with a focus on building practical, dependable software applications. Rather than just studying theory, I prioritize learning by building real projects from scratch.",
-    "My engineering interests span modern web development, software engineering principles, and creative technologies including UI animation and 3D development with Blender. I am constantly working to strengthen my foundations and write cleaner, more maintainable code.",
+    "I'm Mohammed Omar, a Software Engineering student at Daffodil International University. I learn by building practical projects and experimenting with web development, software engineering, animation, and 3D development.",
+    "My engineering focus is on understanding core computer science principles and applying them by building practical software applications. Alongside core software engineering, I explore web animation and 3D modeling with Blender, caring about writing maintainable code and building interfaces that feel responsive and well-crafted.",
   ],
 
   interests: [
@@ -67,7 +67,7 @@ export const portfolioData: SiteData = {
     ],
   },
 
-  // Skills Categories (Requested 3 clean categories)
+  // Skills Categories (3 clean groups as requested)
   skillCategories: [
     {
       title: "Frontend",
@@ -76,14 +76,13 @@ export const portfolioData: SiteData = {
         { name: "HTML" },
         { name: "CSS" },
         { name: "JavaScript" },
-        { name: "TypeScript" },
         { name: "React" },
         { name: "Next.js" },
         { name: "Tailwind CSS" },
       ],
     },
     {
-      title: "Development & Tools",
+      title: "Tools",
       description: "Core version control, editor tooling, and development workflow.",
       skills: [
         { name: "Git" },

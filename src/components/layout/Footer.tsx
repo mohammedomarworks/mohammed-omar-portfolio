@@ -3,8 +3,18 @@
 import React from "react";
 import { Container } from "@/components/ui/Container";
 import { portfolioData } from "@/data/portfolio";
-import { Mail, ArrowUp } from "lucide-react";
+import { ArrowUp } from "lucide-react";
 import { Github, Linkedin } from "@/components/ui/Icons";
+import { Mail } from "lucide-react";
+
+const FOOTER_LINKS = [
+  { label: "Home", href: "#hero" },
+  { label: "About", href: "#about" },
+  { label: "Skills", href: "#skills" },
+  { label: "Education", href: "#education" },
+  { label: "Projects", href: "#projects" },
+  { label: "Contact", href: "#contact" },
+];
 
 export function Footer() {
   const scrollToTop = () => {
@@ -25,20 +35,40 @@ export function Footer() {
   };
 
   return (
-    <footer className="border-t border-zinc-200/80 dark:border-zinc-800 bg-[#faf9f6] dark:bg-[#0d0f17]/90 py-12 transition-colors">
+    <footer className="border-t border-slate-200/90 dark:border-slate-800 bg-white dark:bg-slate-900 py-12 transition-colors">
       <Container>
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Identity & Status */}
-          <div className="text-center sm:text-left">
-            <p className="text-sm font-bold text-zinc-900 dark:text-zinc-100">
+          <div className="text-center md:text-left">
+            <a
+              href="#hero"
+              className="inline-flex items-center gap-1.5 text-slate-900 dark:text-white font-bold tracking-tight mb-1"
+            >
+              <span className="text-lg tracking-tight font-extrabold font-mono">OMAR</span>
+              <span className="w-1.5 h-1.5 rounded-full bg-indigo-600 dark:bg-indigo-400" />
+            </a>
+            <p className="text-sm font-semibold text-slate-800 dark:text-slate-200">
               {portfolioData.name}
             </p>
-            <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1 font-mono">
+            <p className="text-xs text-slate-500 dark:text-slate-400 font-mono mt-0.5">
               Software Engineering Student • {portfolioData.university}
             </p>
           </div>
 
-          {/* Social Links */}
+          {/* Quick Links */}
+          <nav className="flex flex-wrap items-center justify-center gap-4 text-xs font-medium text-slate-600 dark:text-slate-400" aria-label="Footer Navigation">
+            {FOOTER_LINKS.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+
+          {/* Social Links & Back to Top */}
           <div className="flex items-center gap-3">
             {portfolioData.socialLinks.map((social) => (
               <a
@@ -47,7 +77,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.label}
-                className="p-2 rounded-xl text-zinc-600 dark:text-zinc-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-zinc-200/60 dark:hover:bg-zinc-800 transition-colors focus-visible:ring-2 focus-visible:ring-indigo-500"
+                className="p-2 rounded-xl text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-visible:ring-2 focus-visible:ring-indigo-500"
               >
                 {getSocialIcon(social.icon)}
               </a>
@@ -56,7 +86,7 @@ export function Footer() {
             <button
               onClick={scrollToTop}
               aria-label="Scroll back to top of page"
-              className="p-2 rounded-xl text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-200/60 dark:hover:bg-zinc-800 transition-colors focus-visible:ring-2 focus-visible:ring-indigo-500 ml-2"
+              className="p-2 rounded-xl text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-visible:ring-2 focus-visible:ring-indigo-500 ml-1"
               title="Back to top"
             >
               <ArrowUp className="w-4 h-4" />
@@ -64,8 +94,8 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Copyright & Next.js attribution */}
-        <div className="mt-8 pt-6 border-t border-zinc-200/60 dark:border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500 dark:text-zinc-400">
+        {/* Copyright */}
+        <div className="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
           <p>© {new Date().getFullYear()} {portfolioData.name}. All rights reserved.</p>
           <p className="font-mono text-[11px]">
             Personal Engineering Portfolio • Daffodil International University
