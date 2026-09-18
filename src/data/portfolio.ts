@@ -24,7 +24,7 @@ export const portfolioData: SiteData = {
   // Personal Details Area
   personalDetails: {
     name: "Mohammed Omar",
-    dateOfBirth: "9November,2003",
+    dateOfBirth: "9 November, 2003",
     phone: "+8801833799480",
     email: "mohammedomarworks@gmail.com",
     university: "Daffodil International University",
