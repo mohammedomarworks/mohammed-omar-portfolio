@@ -49,7 +49,7 @@ export function Contact() {
                 </div>
                 <div>
                   <span className="block text-xs font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400 font-semibold">
-                    Direct Email (Placeholder)
+                    Direct Email
                   </span>
                   <a
                     href={`mailto:${portfolioData.email}`}
@@ -131,10 +131,10 @@ export function Contact() {
                     </div>
                     <div>
                       <h4 className="text-sm font-semibold text-slate-900 dark:text-slate-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
-                        LinkedIn (Placeholder)
+                        LinkedIn Profile
                       </h4>
                       <p className="text-xs text-slate-500 dark:text-slate-400 font-mono">
-                        Connect professionally
+                        omar-mohammed-2118b5428
                       </p>
                     </div>
                   </div>

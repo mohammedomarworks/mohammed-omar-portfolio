@@ -17,9 +17,19 @@ export const portfolioData: SiteData = {
 
   // About Section Content
   bio: [
-    "I'm Mohammed Omar, a Software Engineering student at Daffodil International University. I learn by building practical projects and experimenting with web development, software engineering, animation, and 3D development.",
-    "My engineering focus is on understanding core computer science principles and applying them by building practical software applications. Alongside core software engineering, I explore web animation and 3D modeling with Blender, caring about writing maintainable code and building interfaces that feel responsive and well-crafted.",
+    "I'm Mohammed Omar, a Software Engineering student at Daffodil International University.",
+    "I learn by building practical projects and exploring web development, software engineering, animation, and 3D development.",
   ],
+
+  // Personal Details Area
+  personalDetails: {
+    name: "Mohammed Omar",
+    dateOfBirth: "[PLACEHOLDER — TO BE PROVIDED]",
+    phone: "[PLACEHOLDER — TO BE PROVIDED]",
+    email: "mohammedomarworks@gmail.com",
+    university: "Daffodil International University",
+    field: "Software Engineering",
+  },
 
   interests: [
     "Web Development",
@@ -29,53 +39,97 @@ export const portfolioData: SiteData = {
   ],
 
   // Direct Contact Details
-  // Replace these placeholders with your active profiles
-  email: "your.email@example.com", // <-- PLACEHOLDER: Replace with your actual email
+  email: "mohammedomarworks@gmail.com",
 
   socialLinks: [
     {
       name: "GitHub",
-      url: "https://github.com/mohammedomarworks", // Verified active profile
+      url: "https://github.com/mohammedomarworks",
       label: "Mohammed Omar on GitHub",
       icon: "github",
     },
     {
       name: "LinkedIn",
-      url: "https://linkedin.com/in/yourusername", // <-- PLACEHOLDER: Replace with your LinkedIn URL
+      url: "https://www.linkedin.com/in/omar-mohammed-2118b5428/",
       label: "Mohammed Omar on LinkedIn",
       icon: "linkedin",
     },
     {
       name: "Email",
-      url: "mailto:your.email@example.com", // <-- PLACEHOLDER: Replace with your email link
+      url: "mailto:mohammedomarworks@gmail.com",
       label: "Send an Email to Mohammed Omar",
       icon: "mail",
     },
   ],
 
-  // Education Details (Strictly factual, no invented dates or metrics)
-  education: {
-    institution: "Daffodil International University",
-    degree: "Software Engineering",
-    department: "Department of Software Engineering",
-    status: "Current Student",
-    location: "Dhaka, Bangladesh",
-    highlights: [
-      "Core coursework in software engineering methodologies, data structures, and algorithms",
-      "Practical project work developing functional web applications and student workflows",
-      "Collaborative teamwork and problem solving within campus engineering labs",
-    ],
-  },
+  // Education Details (Chronological academic timeline)
+  education: [
+    {
+      id: "diu",
+      institution: "Daffodil International University",
+      program: "Software Engineering",
+      degree: "B.Sc. in Software Engineering",
+      level: "Undergraduate",
+      status: "Current Student",
+      location: "Dhaka, Bangladesh",
+      highlights: [
+        "Core coursework in Data Structures, Algorithms, and Software Engineering methodologies",
+        "Practical software development and engineering projects",
+      ],
+    },
+    {
+      id: "gimc",
+      institution: "Giasuddin Islamic Model College",
+      program: "Higher Secondary Certificate (HSC)",
+      level: "HSC",
+      year: "2022",
+      gpa: "4.83 / 5.00",
+      status: "Completed (2022)",
+      location: "Narayanganj, Bangladesh",
+    },
+    {
+      id: "risc",
+      institution: "Rafiqul Islam School & College",
+      program: "Secondary School Certificate (SSC)",
+      level: "SSC",
+      year: "2020",
+      gpa: "4.44 / 5.00",
+      status: "Completed (2020)",
+      location: "Dhaka, Bangladesh",
+    },
+  ],
 
-  // Skills Categories (3 clean groups as requested)
+  // Skills Categories (6 distinct groups)
   skillCategories: [
     {
-      title: "Frontend",
-      description: "Building responsive, modern, and accessible user interfaces.",
+      title: "Programming Languages",
+      description: "Core languages for software logic and scripting.",
+      skills: [
+        { name: "C" },
+        { name: "JavaScript" },
+      ],
+    },
+    {
+      title: "Core Computer Science",
+      description: "Theoretical foundations and algorithmic problem solving.",
+      skills: [
+        { name: "Data Structures & Algorithms (DSA)" },
+        { name: "Object-Oriented Programming (OOP)" },
+      ],
+    },
+    {
+      title: "Database",
+      description: "Relational data structuring and structured querying.",
+      skills: [
+        { name: "SQL" },
+      ],
+    },
+    {
+      title: "Web Development",
+      description: "Building responsive, modern user interfaces.",
       skills: [
         { name: "HTML" },
         { name: "CSS" },
-        { name: "JavaScript" },
         { name: "React" },
         { name: "Next.js" },
         { name: "Tailwind CSS" },
@@ -83,7 +137,7 @@ export const portfolioData: SiteData = {
     },
     {
       title: "Tools",
-      description: "Core version control, editor tooling, and development workflow.",
+      description: "Version control, developer environments, and collaboration.",
       skills: [
         { name: "Git" },
         { name: "GitHub" },
@@ -92,7 +146,7 @@ export const portfolioData: SiteData = {
     },
     {
       title: "Creative / 3D",
-      description: "Visual experiments, spatial models, and interactive animation.",
+      description: "Visual modeling, animation, and motion experiments.",
       skills: [
         { name: "Blender" },
         { name: "Animation" },

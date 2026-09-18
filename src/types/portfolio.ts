@@ -23,12 +23,25 @@ export interface SkillCategory {
 }
 
 export interface EducationItem {
+  id: string;
   institution: string;
-  degree: string;
-  department: string;
+  program?: string;
+  degree?: string;
+  level?: string;
+  year?: string;
+  gpa?: string;
   status: string;
-  location: string;
-  highlights: string[];
+  location?: string;
+  highlights?: string[];
+}
+
+export interface PersonalDetails {
+  name: string;
+  dateOfBirth: string;
+  phone: string;
+  email: string;
+  university: string;
+  field: string;
 }
 
 export interface SocialLink {
@@ -46,8 +59,9 @@ export interface SiteData {
   bio: string[];
   interests: string[];
   email: string;
+  personalDetails: PersonalDetails;
   socialLinks: SocialLink[];
-  education: EducationItem;
+  education: EducationItem[];
   skillCategories: SkillCategory[];
   currentlyLearning: string[];
   projects: Project[];

@@ -10,16 +10,16 @@ import { Project } from "@/types/portfolio";
 
 export const projectsData: Project[] = [
   {
-    id: "marketbridge",
-    title: "MarketBridge — DIU Student Hub",
+    id: "sidraessentials",
+    title: "Sidra Essentials",
     description:
-      "A peer-to-peer campus marketplace concept designed for verified Daffodil International University students to exchange textbooks, electronics, and hostel essentials.",
-    highlight: "Campus verification and escrow transaction model.",
+      "[Project description placeholder — to be provided. Add your overview of Sidra Essentials, features, and workflow here.]",
+    highlight: "Primary featured project showcasing end-to-end web storefront architecture.",
     featured: true,
     techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
     githubUrl: "https://github.com/mohammedomarworks", // <-- PLACEHOLDER: Replace with specific repository URL when published
     liveUrl: "", // <-- PLACEHOLDER: Add live demo URL when deployed
-    category: "Campus Platform",
+    category: "Featured Storefront",
   },
   {
     id: "studyflow",
@@ -44,14 +44,15 @@ export const projectsData: Project[] = [
     category: "Business System",
   },
   {
-    id: "birthday-animation",
-    title: "Interactive Birthday Animation",
+    id: "marketbridge",
+    title: "MarketBridge — DIU Student Hub",
     description:
-      "A browser-based interactive animation experiment combining canvas rendering, smooth timing curves, and DOM motion physics.",
+      "A peer-to-peer campus marketplace concept designed for verified Daffodil International University students to exchange textbooks, electronics, and hostel essentials.",
+    highlight: "Campus verification and escrow transaction model.",
     featured: false,
-    techStack: ["JavaScript", "HTML5 Canvas", "CSS Motion"],
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
     githubUrl: "https://github.com/mohammedomarworks", // <-- PLACEHOLDER: Replace with specific repository URL when published
     liveUrl: "", // <-- PLACEHOLDER: Add live demo URL when deployed
-    category: "Creative & Motion",
+    category: "Campus Platform",
   },
 ];

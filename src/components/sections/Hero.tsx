@@ -4,10 +4,9 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { portfolioData } from "@/data/portfolio";
-import { ArrowRight, FileDown, Mail } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 import { Github, Linkedin } from "@/components/ui/Icons";
 import { NetworkBackground } from "@/components/ui/NetworkBackground";
-import { useResumeDownload, ResumeModal } from "@/components/ui/ResumeModal";
 
 const ROTATING_ROLES = [
   "Software Engineering Student",
@@ -17,8 +16,6 @@ const ROTATING_ROLES = [
 ];
 
 export function Hero() {
-  const { isResumeModalOpen, closeResumeModal, downloadResume } = useResumeDownload();
-
   const [roleIndex, setRoleIndex] = useState(0);
   const [displayedRole, setDisplayedRole] = useState(ROTATING_ROLES[0]);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -133,7 +130,7 @@ export function Hero() {
             </p>
           </div>
 
-          {/* 2. Primary Buttons: [ About Me ] and [ Download Resume ] */}
+          {/* 2. Primary Buttons: [ About Me ] and [ View Projects ] */}
           <div className="order-2 lg:col-span-7">
             <div className="flex flex-wrap items-center gap-3.5 sm:gap-4">
               <a
@@ -144,14 +141,13 @@ export function Hero() {
                 <ArrowRight className="w-4 h-4" />
               </a>
 
-              <button
-                type="button"
-                onClick={downloadResume}
+              <a
+                href="#projects"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800/80 border border-slate-300 dark:border-slate-700 shadow-sm transition-all duration-150 focus-visible:ring-2 focus-visible:ring-indigo-500 hover:-translate-y-0.5"
               >
-                <FileDown className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
-                <span>Download Resume</span>
-              </button>
+                <span>View Projects</span>
+                <ArrowRight className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
+              </a>
             </div>
           </div>
 
@@ -174,26 +170,26 @@ export function Hero() {
                 <span>GitHub</span>
               </a>
 
-              {/* LinkedIn Placeholder */}
+              {/* LinkedIn */}
               <a
                 href={linkedinLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Mohammed Omar on LinkedIn (Placeholder)"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-600 dark:text-slate-400 bg-slate-100/70 dark:bg-slate-800/50 hover:bg-indigo-50 dark:hover:bg-indigo-950/40 hover:text-indigo-600 dark:hover:text-indigo-400 border border-slate-200/80 dark:border-slate-700/60 transition-colors focus-visible:ring-2 focus-visible:ring-indigo-500"
+                aria-label="Mohammed Omar on LinkedIn"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800/80 hover:bg-indigo-50 dark:hover:bg-indigo-950/40 hover:text-indigo-600 dark:hover:text-indigo-400 border border-slate-200 dark:border-slate-700 transition-colors focus-visible:ring-2 focus-visible:ring-indigo-500"
               >
                 <Linkedin className="w-3.5 h-3.5" />
-                <span>LinkedIn <span className="text-[10px] text-slate-400">(placeholder)</span></span>
+                <span>LinkedIn</span>
               </a>
 
-              {/* Email Placeholder */}
+              {/* Email */}
               <a
                 href={emailLink}
-                aria-label="Email Mohammed Omar (Placeholder)"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-600 dark:text-slate-400 bg-slate-100/70 dark:bg-slate-800/50 hover:bg-indigo-50 dark:hover:bg-indigo-950/40 hover:text-indigo-600 dark:hover:text-indigo-400 border border-slate-200/80 dark:border-slate-700/60 transition-colors focus-visible:ring-2 focus-visible:ring-indigo-500"
+                aria-label="Email Mohammed Omar"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800/80 hover:bg-indigo-50 dark:hover:bg-indigo-950/40 hover:text-indigo-600 dark:hover:text-indigo-400 border border-slate-200 dark:border-slate-700 transition-colors focus-visible:ring-2 focus-visible:ring-indigo-500"
               >
                 <Mail className="w-3.5 h-3.5" />
-                <span>Email <span className="text-[10px] text-slate-400">(placeholder)</span></span>
+                <span>Email</span>
               </a>
             </div>
           </div>
@@ -241,9 +237,6 @@ export function Hero() {
           </div>
         </div>
       </Container>
-
-      {/* Fallback modal for Resume */}
-      <ResumeModal isOpen={isResumeModalOpen} onClose={closeResumeModal} />
     </section>
   );
 }
