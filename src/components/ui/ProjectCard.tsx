@@ -1,6 +1,6 @@
 import React from "react";
 import { Project } from "@/types/portfolio";
-import { ExternalLink, Star, ShieldCheck, CheckCircle2 } from "lucide-react";
+import { ExternalLink, Star, ShieldCheck, CheckCircle2, ShoppingBag } from "lucide-react";
 import { Github } from "@/components/ui/Icons";
 
 interface ProjectCardProps {
@@ -63,17 +63,19 @@ function ProjectVisualPlaceholder({ project }: { project: Project }) {
           </div>
         </div>
       );
-    case "birthday-animation":
+    case "sidraessentials":
       return (
         <div className="relative w-full h-full bg-slate-900 overflow-hidden flex items-center justify-center p-6 border-b border-zinc-200/80 dark:border-zinc-800">
-          <div className="absolute inset-0 opacity-25 [background-image:radial-gradient(circle_at_center,#6366f1_1px,transparent_1px)] [background-size:18px_18px]" />
-          <div className="relative z-10 flex items-center gap-3 font-mono text-center">
-            <div className="w-12 h-12 rounded-full border border-dashed border-indigo-400/60 flex items-center justify-center text-indigo-400 animate-[spin_12s_linear_infinite]">
-              <div className="w-6 h-6 rounded-full bg-indigo-500/20 border border-indigo-400" />
+          <div className="absolute inset-0 opacity-20 [background-image:linear-gradient(to_right,#6366f1_1px,transparent_1px),linear-gradient(to_bottom,#6366f1_1px,transparent_1px)] bg-[size:18px_18px]" />
+          <div className="relative z-10 flex flex-col items-center gap-2 text-center">
+            <div className="p-3 rounded-xl bg-indigo-500/10 border border-indigo-500/30 text-indigo-400">
+              <ShoppingBag className="w-8 h-8" />
             </div>
-            <div className="text-left">
-              <div className="text-xs text-slate-200 font-semibold">CANVAS_ANIMATION</div>
-              <div className="text-[11px] text-slate-400">Interactive Particle &bull; Motion Physics</div>
+            <div className="font-mono text-xs text-slate-200 font-semibold tracking-wider">
+              E-COMMERCE // STOREFRONT
+            </div>
+            <div className="text-[11px] font-mono text-slate-400">
+              Product Catalog &bull; Cart &bull; Checkout Flow
             </div>
           </div>
         </div>
@@ -90,7 +92,8 @@ function ProjectVisualPlaceholder({ project }: { project: Project }) {
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
-  const hasValidLive = project.liveUrl && project.liveUrl !== "#" && !project.liveUrl.includes("example.com");
+  const hasValidLive = Boolean(project.liveUrl && project.liveUrl !== "#" && project.liveUrl.trim() !== "" && !project.liveUrl.includes("example.com"));
+  const hasValidGithub = Boolean(project.githubUrl && project.githubUrl !== "#" && project.githubUrl.trim() !== "" && !project.githubUrl.includes("example.com"));
 
   return (
     <article className="group flex flex-col justify-between rounded-2xl bg-white dark:bg-zinc-900/90 border border-zinc-200/80 dark:border-zinc-800 overflow-hidden transition-all duration-300 hover:border-indigo-300 dark:hover:border-indigo-700 hover:shadow-xl hover:shadow-indigo-950/5 dark:hover:shadow-black/40">
@@ -161,18 +164,26 @@ export function ProjectCard({ project }: ProjectCardProps) {
       {/* Action Buttons Footer */}
       <div className="p-6 pt-0 sm:p-7 sm:pt-0 mt-2">
         <div className="pt-4 border-t border-zinc-100 dark:border-zinc-800/80 flex flex-wrap items-center gap-3">
-          {project.githubUrl ? (
+          {hasValidGithub ? (
             <a
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`View ${project.title} repository on GitHub`}
+              aria-label={`View ${project.title} on GitHub`}
               className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold text-zinc-800 dark:text-zinc-200 bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors focus-visible:ring-2 focus-visible:ring-indigo-500"
             >
               <Github className="w-3.5 h-3.5" />
               <span>GitHub</span>
             </a>
-          ) : null}
+          ) : (
+            <span
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-mono text-zinc-400 dark:text-zinc-500 bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200/50 dark:border-zinc-700/40 cursor-default"
+              title="Repository link will be added when published"
+            >
+              <Github className="w-3.5 h-3.5 opacity-60" />
+              <span>Repo Coming Soon</span>
+            </span>
+          )}
 
           {hasValidLive ? (
             <a

@@ -7,22 +7,22 @@ export function About() {
   const engineeringPillars = [
     {
       title: "Software Engineering",
-      description: "Pursuing my degree at Daffodil International University, building a strong core in data structures, algorithms, and clean software architecture.",
+      description: "Pursuing my degree at Daffodil International University, building a solid foundation in data structures, algorithms, and software design.",
       icon: <Layers className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />,
     },
     {
-      title: "Learning by Building",
-      description: "Translating concepts into functional code through hands-on personal projects rather than purely theoretical study.",
+      title: "Hands-on Practice",
+      description: "Applying classroom theory directly to functional projects, student utilities, and web applications.",
       icon: <Compass className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />,
     },
     {
       title: "Web Development",
-      description: "Developing modern, responsive frontend applications with React, Next.js, and TypeScript with an emphasis on speed and accessibility.",
+      description: "Building responsive frontends with React, Next.js, and TypeScript with attention to clean layout and accessibility.",
       icon: <Code2 className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />,
     },
     {
       title: "Animation & 3D",
-      description: "Exploring creative interaction design through CSS animations, browser motion physics, and 3D modeling fundamentals in Blender.",
+      description: "Learning CSS motion, canvas interactions, and 3D asset modeling fundamentals in Blender.",
       icon: <Box className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />,
     },
   ];
@@ -40,13 +40,13 @@ export function About() {
           {/* Natural Student Narrative */}
           <div className="lg:col-span-6 space-y-5 text-base sm:text-lg text-zinc-600 dark:text-zinc-300 leading-relaxed">
             <p>
-              I am <span className="font-semibold text-zinc-900 dark:text-zinc-100">Mohammed Omar</span>, a Software Engineering student at <span className="font-semibold text-zinc-900 dark:text-zinc-100">Daffodil International University</span>.
+              I am <span className="font-semibold text-zinc-900 dark:text-zinc-100">Mohammed Omar</span>, an undergraduate Software Engineering student at <span className="font-semibold text-zinc-900 dark:text-zinc-100">Daffodil International University</span>.
             </p>
             <p>
-              My path in engineering is guided by curiosity and pragmatic building. Rather than waiting for senior years, I dive directly into real problems—building web applications that solve campus workflows, experiment with interactive interfaces, and implement clean software patterns.
+              My focus is on understanding core computer science principles and applying them by building practical software applications. From campus tools to workflow utilities, I learn best by writing code, structuring systems, and solving real user problems.
             </p>
             <p>
-              Alongside core software engineering, I have a strong creative pull toward UI animation and 3D development with Blender. I believe that thoughtful software should not only work reliably under the hood, but also feel responsive, lively, and human in use.
+              Alongside core software engineering, I explore web animation and 3D modeling with Blender. I care about writing maintainable code and building interfaces that feel responsive and well-crafted.
             </p>
 
             <div className="pt-2">

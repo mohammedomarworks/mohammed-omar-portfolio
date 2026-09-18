@@ -76,6 +76,7 @@ export const portfolioData: SiteData = {
         { name: "HTML" },
         { name: "CSS" },
         { name: "JavaScript" },
+        { name: "TypeScript" },
         { name: "React" },
         { name: "Next.js" },
         { name: "Tailwind CSS" },

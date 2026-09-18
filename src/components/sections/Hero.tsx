@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { portfolioData } from "@/data/portfolio";
 import { ArrowRight, UserCheck } from "lucide-react";
@@ -83,12 +84,15 @@ export function Hero() {
 
               {/* Portrait Frame Container */}
               <div className="relative rounded-3xl bg-white dark:bg-zinc-900 p-2 sm:p-2.5 shadow-xl shadow-zinc-900/5 dark:shadow-black/40 border border-zinc-200/80 dark:border-zinc-800 overflow-hidden">
-                <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-800">
-                  <img
-                    src="/images/profile.jpg"
+                <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-800">
+                  <Image
+                    src="/images/Omar.jpeg"
                     alt="Mohammed Omar - Software Engineering Student"
+                    width={960}
+                    height={1280}
+                    priority
                     className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
-                    loading="eager"
+                    sizes="(max-width: 640px) 280px, (max-width: 1024px) 320px, 360px"
                   />
                 </div>
 
@@ -100,7 +104,7 @@ export function Hero() {
                       <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
                     </span>
                     <span className="font-medium text-zinc-800 dark:text-zinc-200 font-mono text-[11px]">
-                      DIU // Software Engineering
+                      Software Engineering Student
                     </span>
                   </div>
                   <UserCheck className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400" />

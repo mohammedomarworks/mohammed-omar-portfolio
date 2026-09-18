@@ -13,45 +13,45 @@ export const projectsData: Project[] = [
     id: "marketbridge",
     title: "MarketBridge — DIU Student Hub",
     description:
-      "A peer-to-peer campus marketplace concept designed for verified DIU students to buy and sell items such as textbooks, calculators, electronics, and hostel-related items.",
-    highlight: "Escrow-based transaction flow with campus handover verification.",
+      "A peer-to-peer campus marketplace concept designed for verified Daffodil International University students to exchange textbooks, electronics, and hostel essentials.",
+    highlight: "Campus verification and escrow transaction model.",
     featured: true,
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Escrow Concept", "Verification Flow"],
-    githubUrl: "https://github.com/mohammedomarworks/marketbridge", // <-- Replace with your repository link
-    liveUrl: "#", // <-- Replace with your live demo URL when ready
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
+    githubUrl: "https://github.com/mohammedomarworks", // <-- PLACEHOLDER: Links to GitHub profile. Update with specific repo URL when published.
+    liveUrl: "", // <-- PLACEHOLDER: Add live demo URL when deployed
     category: "Campus Platform",
   },
   {
     id: "studyflow",
     title: "StudyFlow",
     description:
-      "A student productivity web application focused on tasks, planning, and organizing academic work with a distraction-free interface.",
+      "A responsive study planner and task management web app featuring coursework sprint tracking, calendar planning, notes, and local storage persistence.",
     featured: false,
-    techStack: ["React", "TypeScript", "Tailwind CSS", "Productivity System", "Client Storage"],
-    githubUrl: "https://github.com/mohammedomarworks/studyflow", // <-- Replace with your repository link
-    liveUrl: "#", // <-- Replace with your live demo URL when ready
+    techStack: ["JavaScript", "HTML5", "CSS3", "LocalStorage"],
+    githubUrl: "https://github.com/mohammedomarworks/StudyFlow",
+    liveUrl: "", // <-- PLACEHOLDER: Add live demo URL when deployed
     category: "Productivity",
   },
   {
     id: "brewpos",
     title: "BrewPOS",
     description:
-      "A point-of-sale web application concept designed around café and small business workflows, streamlining order tracking and item management.",
+      "A point-of-sale web application designed for café and small business workflows, streamlining order tracking, item management, and checkout tallying.",
     featured: false,
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Workflow Architecture", "State Management"],
-    githubUrl: "https://github.com/mohammedomarworks/brewpos", // <-- Replace with your repository link
-    liveUrl: "#", // <-- Replace with your live demo URL when ready
+    techStack: ["TypeScript", "Next.js", "Tailwind CSS"],
+    githubUrl: "https://github.com/mohammedomarworks/BrewPOS",
+    liveUrl: "", // <-- PLACEHOLDER: Add live demo URL when deployed
     category: "Business System",
   },
   {
-    id: "birthday-animation",
-    title: "Interactive Birthday Animation",
+    id: "sidraessentials",
+    title: "SidraEssentials",
     description:
-      "A browser-based interactive animation experiment combining creative visuals, smooth timing curves, and JavaScript-driven motion effects.",
+      "An e-commerce bag store interface featuring product catalog filtering, interactive cart management, responsive item showcases, and a checkout layout.",
     featured: false,
-    techStack: ["JavaScript", "CSS Animation", "Canvas / DOM Motion", "Interactive UI"],
-    githubUrl: "https://github.com/mohammedomarworks/birthday-animation", // <-- Replace with your repository link
-    liveUrl: "#", // <-- Replace with your live demo URL when ready
-    category: "Creative & Motion",
+    techStack: ["React", "Next.js", "Tailwind CSS"],
+    githubUrl: "https://github.com/mohammedomarworks", // <-- PLACEHOLDER: Links to GitHub profile. Update with specific repo URL when published.
+    liveUrl: "", // <-- PLACEHOLDER: Add live demo URL when deployed
+    category: "E-Commerce",
   },
 ];
