@@ -196,7 +196,7 @@ export function ProjectCard({ project, isFeaturedLayout = false }: ProjectCardPr
                 aria-label={`View live demo for ${project.title}`}
                 className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-500 transition-colors focus-visible:ring-2 focus-visible:ring-indigo-500 shadow-sm shadow-indigo-600/20"
               >
-                <span>Live Storefront Demo</span>
+                <span>Live Demo</span>
                 <ExternalLink className="w-4 h-4" />
               </a>
             ) : (

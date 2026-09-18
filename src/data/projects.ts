@@ -18,7 +18,7 @@ export const projectsData: Project[] = [
     featured: true,
     techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
     githubUrl: "https://github.com/mohammedomarworks", // <-- PLACEHOLDER: Replace with specific repository URL when published
-    liveUrl: "", // <-- PLACEHOLDER: Add live demo URL when deployed
+    liveUrl: "https://sidraessentials.vercel.app/",
     category: "Featured Storefront",
   },
   {
@@ -29,7 +29,7 @@ export const projectsData: Project[] = [
     featured: false,
     techStack: ["JavaScript", "HTML5", "CSS3", "LocalStorage"],
     githubUrl: "https://github.com/mohammedomarworks/StudyFlow",
-    liveUrl: "", // <-- PLACEHOLDER: Add live demo URL when deployed
+    liveUrl: "https://mohammedomarworks.github.io/StudyFlow/",
     category: "Productivity",
   },
   {
@@ -50,9 +50,9 @@ export const projectsData: Project[] = [
       "A peer-to-peer campus marketplace concept designed for verified Daffodil International University students to exchange textbooks, electronics, and hostel essentials.",
     highlight: "Campus verification and escrow transaction model.",
     featured: false,
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
+    techStack: ["Next.js", "JavaScript", "Tailwind CSS"],
     githubUrl: "https://github.com/mohammedomarworks", // <-- PLACEHOLDER: Replace with specific repository URL when published
-    liveUrl: "", // <-- PLACEHOLDER: Add live demo URL when deployed
+    liveUrl: "https://marketbridge-student-etsluiej1-sadid-ahmeds-projects-8f65bec3.vercel.app/",
     category: "Campus Platform",
   },
 ];
