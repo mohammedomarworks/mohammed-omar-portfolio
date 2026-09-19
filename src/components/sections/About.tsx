@@ -12,12 +12,11 @@ import {
   Building2,
   GraduationCap,
   FileDown,
+  ExternalLink,
   Sparkles,
 } from "lucide-react";
-import { useResumeDownload, ResumeModal } from "@/components/ui/ResumeModal";
 
 export function About() {
-  const { isResumeModalOpen, closeResumeModal, downloadResume } = useResumeDownload();
   const { personalDetails } = portfolioData;
 
   const detailItems = [
@@ -25,38 +24,33 @@ export function About() {
       icon: <User className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />,
       label: "Name",
       value: personalDetails.name,
-      isPlaceholder: false,
     },
     {
-      icon: <GraduationCap className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />,
-      label: "Field",
-      value: personalDetails.field,
-      isPlaceholder: false,
+      icon: <Calendar className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />,
+      label: "Date of Birth",
+      value: personalDetails.dateOfBirth,
     },
     {
-      icon: <Building2 className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />,
-      label: "University",
-      value: personalDetails.university,
-      isPlaceholder: false,
+      icon: <Phone className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />,
+      label: "Phone",
+      value: personalDetails.phone,
+      href: `tel:${personalDetails.phone.replace(/\s+/g, "")}`,
     },
     {
       icon: <Mail className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />,
       label: "Email",
       value: personalDetails.email,
       href: `mailto:${personalDetails.email}`,
-      isPlaceholder: false,
     },
     {
-      icon: <Calendar className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />,
-      label: "Date of Birth",
-      value: personalDetails.dateOfBirth,
-      isPlaceholder: personalDetails.dateOfBirth.includes("PLACEHOLDER"),
+      icon: <Building2 className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />,
+      label: "University",
+      value: personalDetails.university,
     },
     {
-      icon: <Phone className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />,
-      label: "Phone",
-      value: personalDetails.phone,
-      isPlaceholder: personalDetails.phone.includes("PLACEHOLDER"),
+      icon: <GraduationCap className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />,
+      label: "Field",
+      value: personalDetails.field,
     },
   ];
 
@@ -105,16 +99,12 @@ export function About() {
                     {item.href ? (
                       <a
                         href={item.href}
-                        className="text-sm sm:text-base font-semibold text-slate-900 dark:text-slate-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors truncate block"
+                        className="text-sm sm:text-base font-semibold text-slate-900 dark:text-slate-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors break-words block"
                       >
                         {item.value}
                       </a>
-                    ) : item.isPlaceholder ? (
-                      <span className="text-xs sm:text-sm font-mono text-slate-400 dark:text-slate-500 italic block">
-                        {item.value}
-                      </span>
                     ) : (
-                      <span className="text-sm sm:text-base font-semibold text-slate-900 dark:text-slate-100 block">
+                      <span className="text-sm sm:text-base font-semibold text-slate-900 dark:text-slate-100 block break-words">
                         {item.value}
                       </span>
                     )}
@@ -130,25 +120,35 @@ export function About() {
                   Curriculum Vitae
                 </h4>
                 <p className="text-xs text-slate-500 dark:text-slate-400 font-mono mt-0.5">
-                  Academic qualifications, engineering coursework, and technical skills summary.
+                  Official PDF resume with academic qualifications, projects, and skills.
                 </p>
               </div>
 
-              <button
-                type="button"
-                onClick={downloadResume}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-500 shadow-sm shadow-indigo-600/20 transition-all duration-150 focus-visible:ring-2 focus-visible:ring-indigo-500 hover:-translate-y-0.5 shrink-0"
-              >
-                <FileDown className="w-4 h-4" />
-                <span>Download Resume</span>
-              </button>
+              <div className="flex flex-wrap items-center gap-3">
+                <a
+                  href="/resume/Mohammed-Omar-Resume.pdf"
+                  download="Mohammed-Omar-Resume.pdf"
+                  className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-500 shadow-sm shadow-indigo-600/20 transition-all duration-150 focus-visible:ring-2 focus-visible:ring-indigo-500 hover:-translate-y-0.5 active:translate-y-0 shrink-0"
+                >
+                  <FileDown className="w-4 h-4" />
+                  <span>Download Resume</span>
+                </a>
+
+                <a
+                  href="/resume/Mohammed-Omar-Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200/80 dark:border-slate-700/80 transition-all duration-150 focus-visible:ring-2 focus-visible:ring-indigo-500 hover:-translate-y-0.5 active:translate-y-0 shrink-0"
+                  aria-label="Open resume PDF in new tab"
+                >
+                  <ExternalLink className="w-4 h-4 text-slate-500 dark:text-slate-400" />
+                  <span>View in Tab</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </Container>
-
-      {/* Graceful modal fallback when PDF is in preparation */}
-      <ResumeModal isOpen={isResumeModalOpen} onClose={closeResumeModal} />
     </section>
   );
 }

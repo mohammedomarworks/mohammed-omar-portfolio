@@ -71,7 +71,7 @@ export function Hero() {
     "https://github.com/mohammedomarworks";
   const linkedinLink =
     portfolioData.socialLinks.find((s) => s.name === "LinkedIn")?.url ||
-    "https://linkedin.com/in/yourusername";
+    "https://www.linkedin.com/in/omar-mohammed-2118b5428/";
   const emailLink =
     portfolioData.socialLinks.find((s) => s.name === "Email")?.url ||
     `mailto:${portfolioData.email}`;

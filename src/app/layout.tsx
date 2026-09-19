@@ -4,26 +4,46 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Mohammed Omar | Software Engineering Student",
-  description: "Personal developer portfolio of Mohammed Omar, Software Engineering student at Daffodil International University. Building practical, modern web applications and software systems.",
-  keywords: [
-    "Mohammed Omar",
-    "Software Engineering",
-    "Daffodil International University",
-    "DIU",
-    "Web Developer",
-    "React",
-    "Next.js",
-    "TypeScript",
-  ],
+  description:
+    "Portfolio of Mohammed Omar, a Software Engineering student at Daffodil International University, showcasing web development projects, software engineering work, and creative technology projects.",
   authors: [{ name: "Mohammed Omar" }],
+  metadataBase: new URL("https://mohammedomarworks.github.io"),
   openGraph: {
     title: "Mohammed Omar | Software Engineering Student",
-    description: "Software Engineering student at Daffodil International University building modern web applications.",
+    description:
+      "Software Engineering student at Daffodil International University showcasing projects in web development and software engineering.",
     type: "website",
+    url: "https://mohammedomarworks.github.io",
+    siteName: "Mohammed Omar Portfolio",
+    locale: "en_US",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Mohammed Omar — Software Engineering Student",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mohammed Omar | Software Engineering Student",
+    description:
+      "Software Engineering student at Daffodil International University showcasing projects in web development and software engineering.",
+    images: ["/og-image.png"],
+  },
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "32x32" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180" }],
   },
 };
 
 export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
     { media: "(prefers-color-scheme: dark)", color: "#0b0f19" },

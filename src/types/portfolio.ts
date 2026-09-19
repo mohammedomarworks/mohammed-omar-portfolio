@@ -2,14 +2,20 @@ export interface Project {
   id: string;
   title: string;
   description: string;
-  highlight?: string;
-  featured?: boolean;
-  techStack: string[];
-  githubUrl: string;
-  liveUrl: string;
-  liveButtonLabel?: string;
   image?: string;
+  imageAlt?: string;
+  technologies: string[];
+  techStack?: string[];
+  github?: string;
+  githubUrl?: string;
+  website?: string;
+  liveUrl?: string;
+  liveButtonLabel?: string;
+  featured?: boolean;
+  type?: "client" | "personal" | "academic" | string;
+  typeLabel?: string;
   category?: string;
+  highlight?: string;
 }
 
 export interface SkillItem {
