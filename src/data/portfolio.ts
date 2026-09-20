@@ -67,39 +67,27 @@ export const portfolioData: SiteData = {
     {
       id: "diu",
       institution: "Daffodil International University",
-      program: "Software Engineering",
       degree: "B.Sc. in Software Engineering",
-      level: "Undergraduate",
+      period: "Fall 2024 – Summer 2028",
       status: "Current Student",
-      location: "Dhaka, Bangladesh",
-      highlights: [
-        "Core coursework in Data Structures, Algorithms, and Software Engineering methodologies",
-        "Practical software development and engineering projects",
-      ],
     },
     {
       id: "gimc",
       institution: "Giasuddin Islamic Model College",
-      program: "Higher Secondary Certificate (HSC)",
-      level: "HSC",
+      degree: "Higher Secondary Certificate (HSC)",
       year: "2022",
       gpa: "4.83 / 5.00",
-      status: "Completed (2022)",
-      location: "Narayanganj, Bangladesh",
     },
     {
       id: "risc",
       institution: "Rafiqul Islam School & College",
-      program: "Secondary School Certificate (SSC)",
-      level: "SSC",
+      degree: "Secondary School Certificate (SSC)",
       year: "2020",
       gpa: "4.44 / 5.00",
-      status: "Completed (2020)",
-      location: "Dhaka, Bangladesh",
     },
   ],
 
-  // Skills Categories (6 distinct groups)
+  // Skills Categories
   skillCategories: [
     {
       title: "Programming Languages",
@@ -107,6 +95,7 @@ export const portfolioData: SiteData = {
       skills: [
         { name: "C" },
         { name: "JavaScript" },
+        { name: "TypeScript" },
       ],
     },
     {
@@ -119,9 +108,11 @@ export const portfolioData: SiteData = {
     },
     {
       title: "Database",
-      description: "Relational data structuring and structured querying.",
+      description: "Relational and document data storage, querying, and modeling.",
       skills: [
         { name: "SQL" },
+        { name: "PostgreSQL" },
+        { name: "MongoDB" },
       ],
     },
     {
@@ -137,11 +128,21 @@ export const portfolioData: SiteData = {
     },
     {
       title: "Tools",
-      description: "Version control, developer environments, and collaboration.",
+      description: "Version control, developer environments, and productivity tools.",
       skills: [
         { name: "Git" },
         { name: "GitHub" },
         { name: "VS Code" },
+        { name: "Microsoft Word" },
+        { name: "Microsoft PowerPoint" },
+        { name: "Canva" },
+      ],
+    },
+    {
+      title: "AI",
+      description: "AI-assisted development workflows and intelligent productivity tools.",
+      skills: [
+        { name: "AI-assisted development / AI tools" },
       ],
     },
     {

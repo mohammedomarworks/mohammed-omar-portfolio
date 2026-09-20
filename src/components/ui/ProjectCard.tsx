@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Project } from "@/types/portfolio";
-import { ExternalLink, Star, Briefcase, ShieldCheck, CheckCircle2, ShoppingBag } from "lucide-react";
+import { ExternalLink, ShieldCheck, CheckCircle2, ShoppingBag } from "lucide-react";
 import { Github } from "@/components/ui/Icons";
 
 interface ProjectCardProps {
@@ -132,18 +132,6 @@ export function ProjectCard({ project, isFeaturedLayout = false }: ProjectCardPr
           ) : (
             <ProjectVisualPlaceholder project={project} />
           )}
-
-          {/* Featured & Client Badges Overlay on Screenshot */}
-          <div className="absolute top-4 left-4 flex flex-wrap items-center gap-2 pointer-events-none z-10">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-bold bg-indigo-600 text-white shadow-md tracking-wider uppercase">
-              <Star className="w-3.5 h-3.5 fill-white" />
-              <span>Featured Project</span>
-            </span>
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-mono font-semibold bg-slate-950/85 text-slate-100 border border-slate-700/60 shadow-md backdrop-blur-sm">
-              <Briefcase className="w-3.5 h-3.5 text-indigo-400" />
-              <span>Client Project</span>
-            </span>
-          </div>
         </div>
 
         {/* Content Section */}

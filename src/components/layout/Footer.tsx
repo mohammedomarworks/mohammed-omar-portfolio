@@ -96,9 +96,14 @@ export function Footer() {
         {/* Copyright */}
         <div className="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
           <p>© {new Date().getFullYear()} {portfolioData.name}. All rights reserved.</p>
-          <p className="inline-flex items-center gap-1.5 font-mono text-[11px] text-slate-500 dark:text-slate-400">
+          <p className="inline-flex items-center gap-1.5 font-mono text-xs text-slate-500 dark:text-slate-400">
             <span>Made with</span>
-            <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500 shrink-0" aria-hidden="true" />
+            <Heart
+              className="w-3.5 h-3.5 text-rose-500 shrink-0 inline-block"
+              fill="#f43f5e"
+              stroke="#f43f5e"
+              aria-hidden="true"
+            />
             <span>by {portfolioData.name}</span>
           </p>
         </div>

@@ -3,7 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { SkillBadge } from "@/components/ui/SkillBadge";
 import { portfolioData } from "@/data/portfolio";
-import { Terminal, Cpu, Database, Layout, Wrench, Palette } from "lucide-react";
+import { Terminal, Cpu, Database, Layout, Wrench, Palette, Sparkles } from "lucide-react";
 
 export function Skills() {
   const getCategoryIcon = (title: string) => {
@@ -18,6 +18,8 @@ export function Skills() {
         return <Layout className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />;
       case "tools":
         return <Wrench className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />;
+      case "ai":
+        return <Sparkles className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />;
       case "creative / 3d":
         return <Palette className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />;
       default:

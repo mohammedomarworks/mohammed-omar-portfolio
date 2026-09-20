@@ -35,9 +35,10 @@ export interface EducationItem {
   program?: string;
   degree?: string;
   level?: string;
+  period?: string;
   year?: string;
   gpa?: string;
-  status: string;
+  status?: string;
   location?: string;
   highlights?: string[];
 }

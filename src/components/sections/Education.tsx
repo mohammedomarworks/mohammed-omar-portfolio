@@ -2,7 +2,7 @@ import React from "react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { portfolioData } from "@/data/portfolio";
-import { GraduationCap, Award, Building, Calendar, MapPin } from "lucide-react";
+import { GraduationCap, Award, Building, Calendar } from "lucide-react";
 
 export function Education() {
   const { education } = portfolioData;
@@ -34,36 +34,37 @@ export function Education() {
 
                 {/* Institution Card */}
                 <div className="p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm transition-all duration-200 hover:border-indigo-300 dark:hover:border-indigo-700 hover:shadow-md">
-                  <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200/80 dark:border-indigo-800/60">
-                      <Calendar className="w-3.5 h-3.5" />
-                      {item.status}
-                    </span>
-
-                    {item.location && (
-                      <span className="inline-flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400 font-mono">
-                        <MapPin className="w-3.5 h-3.5" />
-                        {item.location}
+                  {item.status && (
+                    <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200/80 dark:border-indigo-800/60">
+                        <Calendar className="w-3.5 h-3.5" />
+                        {item.status}
                       </span>
-                    )}
-                  </div>
+                    </div>
+                  )}
 
                   <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
                     {item.institution}
                   </h3>
 
-                  {item.program && (
+                  {(item.degree || item.program) && (
                     <p className="mt-1 text-base font-semibold text-indigo-600 dark:text-indigo-400">
-                      Program: {item.program}
+                      {item.degree || item.program}
                     </p>
                   )}
 
-                  {/* Academic Metrics: GPA and Level Badges */}
+                  {item.period && (
+                    <p className="mt-1.5 text-xs sm:text-sm font-mono text-slate-500 dark:text-slate-400">
+                      {item.period}
+                    </p>
+                  )}
+
+                  {/* Academic Metrics: Year and GPA */}
                   {(item.gpa || item.year) && (
                     <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex flex-wrap items-center gap-3">
-                      {item.level && item.year && (
+                      {item.year && (
                         <span className="px-3 py-1 rounded-lg text-xs font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700/60">
-                          {item.level}: {item.year}
+                          {item.year}
                         </span>
                       )}
                       {item.gpa && (
@@ -72,19 +73,6 @@ export function Education() {
                           <span>GPA: {item.gpa}</span>
                         </span>
                       )}
-                    </div>
-                  )}
-
-                  {item.highlights && item.highlights.length > 0 && (
-                    <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800">
-                      <ul className="space-y-1.5">
-                        {item.highlights.map((highlight, hIdx) => (
-                          <li key={hIdx} className="flex items-start gap-2 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                            <span className="w-1.5 h-1.5 rounded-full bg-indigo-600 dark:bg-indigo-400 mt-2 shrink-0" />
-                            <span>{highlight}</span>
-                          </li>
-                        ))}
-                      </ul>
                     </div>
                   )}
                 </div>
