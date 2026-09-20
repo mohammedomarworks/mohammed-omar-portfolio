@@ -12,7 +12,7 @@ export function Projects() {
       <Container>
         <SectionHeader
           label="Projects"
-          title="Featured Projects"
+          title="Projects"
           description="Projects designed to explore real problems, university workflows, and responsive web systems."
         />
 

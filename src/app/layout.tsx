@@ -2,18 +2,24 @@ import type { Metadata, Viewport } from "next";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import "./globals.css";
 
+const SITE_URL = "https://mohammedomarportfolio.netlify.app";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Mohammed Omar | Software Engineering Student",
   description:
     "Portfolio of Mohammed Omar, a Software Engineering student at Daffodil International University, showcasing web development projects, software engineering work, and creative technology projects.",
-  authors: [{ name: "Mohammed Omar" }],
-  metadataBase: new URL("https://mohammedomarworks.github.io"),
+  authors: [{ name: "Mohammed Omar", url: SITE_URL }],
+  creator: "Mohammed Omar",
+  alternates: {
+    canonical: "https://mohammedomarportfolio.netlify.app/",
+  },
   openGraph: {
     title: "Mohammed Omar | Software Engineering Student",
     description:
-      "Software Engineering student at Daffodil International University showcasing projects in web development and software engineering.",
+      "Portfolio of Mohammed Omar, a Software Engineering student at Daffodil International University, showcasing web development and software engineering projects.",
     type: "website",
-    url: "https://mohammedomarworks.github.io",
+    url: "https://mohammedomarportfolio.netlify.app/",
     siteName: "Mohammed Omar Portfolio",
     locale: "en_US",
     images: [
@@ -21,7 +27,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Mohammed Omar — Software Engineering Student",
+        alt: "Mohammed Omar - Software Engineering Student",
       },
     ],
   },
@@ -29,8 +35,22 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mohammed Omar | Software Engineering Student",
     description:
-      "Software Engineering student at Daffodil International University showcasing projects in web development and software engineering.",
+      "Portfolio of Mohammed Omar, a Software Engineering student at Daffodil International University, showcasing web development and software engineering projects.",
     images: ["/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "u-nmIp5NmCEqUaj67MtLM_kFl6VctFzNc0UwkJ9UFLw",
   },
   icons: {
     icon: [
@@ -39,6 +59,46 @@ export const metadata: Metadata = {
     ],
     apple: [{ url: "/apple-icon.png", sizes: "180x180" }],
   },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://mohammedomarportfolio.netlify.app/#website",
+      "url": "https://mohammedomarportfolio.netlify.app/",
+      "name": "Mohammed Omar | Software Engineering Student",
+      "description":
+        "Portfolio of Mohammed Omar, a Software Engineering student at Daffodil International University, showcasing web development projects, software engineering work, and creative technology projects.",
+      "publisher": {
+        "@id": "https://mohammedomarportfolio.netlify.app/#person",
+      },
+      "inLanguage": "en-US",
+    },
+    {
+      "@type": "Person",
+      "@id": "https://mohammedomarportfolio.netlify.app/#person",
+      "name": "Mohammed Omar",
+      "jobTitle": "Software Engineering Student",
+      "description":
+        "Portfolio of Mohammed Omar, a Software Engineering student at Daffodil International University, showcasing web development and software engineering projects.",
+      "url": "https://mohammedomarportfolio.netlify.app/",
+      "image": "https://mohammedomarportfolio.netlify.app/images/profile.jpg",
+      "affiliation": {
+        "@type": "EducationalOrganization",
+        "name": "Daffodil International University",
+      },
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Daffodil International University",
+      },
+      "sameAs": [
+        "https://github.com/mohammedomarworks",
+        "https://www.linkedin.com/in/omar-mohammed-2118b5428/",
+      ],
+    },
+  ],
 };
 
 export const viewport: Viewport = {
@@ -58,6 +118,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="light">
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
