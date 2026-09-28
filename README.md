@@ -44,6 +44,7 @@ I enjoy learning by building real projects and experimenting with different area
 
 <p>
   <img src="https://img.shields.io/badge/C-00599C?style=flat-square&logo=c&logoColor=white" />
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" />
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
   <img src="https://img.shields.io/badge/DSA-111827?style=flat-square" />
