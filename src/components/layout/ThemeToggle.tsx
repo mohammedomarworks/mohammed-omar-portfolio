@@ -11,9 +11,9 @@ export function ThemeToggle() {
     return (
       <button
         aria-label="Theme toggle loading"
-        className="w-9 h-9 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-800 text-slate-400 opacity-60 cursor-default"
+        className="w-8 h-8 flex items-center justify-center rounded-lg border border-black/10 dark:border-white/[0.07] bg-black/[0.02] dark:bg-white/[0.02] text-zinc-500 opacity-50 cursor-default"
       >
-        <span className="w-4 h-4 rounded-full bg-slate-400/20" />
+        <span className="w-3.5 h-3.5 rounded-full bg-zinc-500/20" />
       </button>
     );
   }
@@ -24,14 +24,14 @@ export function ThemeToggle() {
     <button
       onClick={toggleTheme}
       type="button"
-      aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}
-      title={isDark ? "Switch to light theme" : "Switch to dark theme"}
-      className="w-9 h-9 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 hover:bg-slate-100 dark:hover:bg-slate-800/80 transition-colors duration-150 focus-visible:ring-2 focus-visible:ring-sky-500"
+      aria-label={isDark ? "Switch to light theme" : "Switch to obsidian theme"}
+      title={isDark ? "Switch to light theme" : "Switch to obsidian theme"}
+      className="w-8 h-8 flex items-center justify-center rounded-lg border border-black/10 dark:border-white/[0.07] bg-black/[0.02] dark:bg-white/[0.02] text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-[#f4f4f5] hover:bg-black/[0.05] dark:hover:bg-white/[0.06] transition-colors duration-150 focus-visible:ring-1 focus-visible:ring-emerald-400"
     >
       {isDark ? (
-        <Sun className="w-4 h-4 text-amber-400" />
+        <Sun className="w-4 h-4 text-zinc-300" />
       ) : (
-        <Moon className="w-4 h-4 text-slate-700" />
+        <Moon className="w-4 h-4 text-zinc-700" />
       )}
     </button>
   );

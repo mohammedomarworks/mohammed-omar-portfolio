@@ -6,18 +6,18 @@ const SITE_URL = "https://mohammedomarportfolio.netlify.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Mohammed Omar | Software Engineering Student",
+  title: "Mohammed Omar | Systems & Software Engineering Student",
   description:
-    "Portfolio of Mohammed Omar, a Software Engineering student at Daffodil International University, showcasing web development projects, software engineering work, and creative technology projects.",
+    "Software Engineering Student building native macOS systems, 3D simulations, and full-stack web apps at Daffodil International University.",
   authors: [{ name: "Mohammed Omar", url: SITE_URL }],
   creator: "Mohammed Omar",
   alternates: {
     canonical: "https://mohammedomarportfolio.netlify.app/",
   },
   openGraph: {
-    title: "Mohammed Omar | Software Engineering Student",
+    title: "Mohammed Omar | Systems & Software Engineering Student",
     description:
-      "Portfolio of Mohammed Omar, a Software Engineering student at Daffodil International University, showcasing web development and software engineering projects.",
+      "Software Engineering Student building native macOS systems, 3D simulations, and full-stack web apps.",
     type: "website",
     url: "https://mohammedomarportfolio.netlify.app/",
     siteName: "Mohammed Omar Portfolio",
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mohammed Omar | Software Engineering Student",
+    title: "Mohammed Omar | Systems & Software Engineering Student",
     description:
-      "Portfolio of Mohammed Omar, a Software Engineering student at Daffodil International University, showcasing web development and software engineering projects.",
+      "Software Engineering Student building native macOS systems, 3D simulations, and full-stack web apps.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -68,9 +68,9 @@ const jsonLd = {
       "@type": "WebSite",
       "@id": "https://mohammedomarportfolio.netlify.app/#website",
       "url": "https://mohammedomarportfolio.netlify.app/",
-      "name": "Mohammed Omar | Software Engineering Student",
+      "name": "Mohammed Omar | Systems & Software Engineering Student",
       "description":
-        "Portfolio of Mohammed Omar, a Software Engineering student at Daffodil International University, showcasing web development projects, software engineering work, and creative technology projects.",
+        "Software Engineering Student building native macOS systems, 3D simulations, and full-stack web apps at Daffodil International University.",
       "publisher": {
         "@id": "https://mohammedomarportfolio.netlify.app/#person",
       },
@@ -82,7 +82,7 @@ const jsonLd = {
       "name": "Mohammed Omar",
       "jobTitle": "Software Engineering Student",
       "description":
-        "Portfolio of Mohammed Omar, a Software Engineering student at Daffodil International University, showcasing web development and software engineering projects.",
+        "Software Engineering Student building native macOS systems, 3D simulations, and full-stack web apps.",
       "url": "https://mohammedomarportfolio.netlify.app/",
       "image": "https://mohammedomarportfolio.netlify.app/images/profile.jpg",
       "affiliation": {
@@ -106,7 +106,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#0b0f19" },
+    { media: "(prefers-color-scheme: dark)", color: "#09090b" },
   ],
 };
 
@@ -116,7 +116,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className="light">
+    <html lang="en" suppressHydrationWarning className="dark">
       <head>
         <script
           type="application/ld+json"
@@ -127,21 +127,21 @@ export default function RootLayout({
             __html: `
               try {
                 const storedTheme = localStorage.getItem('mo_portfolio_theme');
-                if (storedTheme === 'dark') {
-                  document.documentElement.classList.add('dark');
-                } else {
+                if (storedTheme === 'light') {
                   document.documentElement.classList.remove('dark');
+                } else {
+                  document.documentElement.classList.add('dark');
                 }
               } catch (e) {}
             `,
           }}
         />
       </head>
-      <body className="min-h-screen bg-background text-foreground transition-colors duration-200 selection:bg-indigo-500 selection:text-white">
+      <body className="min-h-screen bg-background text-foreground transition-colors duration-200 selection:bg-zinc-800 selection:text-emerald-400">
         {/* Skip to main content for screen readers and keyboard accessibility */}
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-indigo-600 focus:text-white focus:rounded-md focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-white"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-zinc-900 focus:text-white focus:border focus:border-white/20 focus:rounded-md focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 font-mono text-xs"
         >
           Skip to main content
         </a>

@@ -5,37 +5,49 @@ import { projectsData } from "@/data/projects";
  * =====================================================================
  * PORTFOLIO DATA CONFIGURATION
  * =====================================================================
- * Personal information, skills, and configuration for Mohammed Omar.
+ * Engineering specification, background, and project registry for Mohammed Omar.
  */
 
 export const portfolioData: SiteData = {
-  // Personal Details
+  // Identity & Headline
   name: "Mohammed Omar",
   title: "Software Engineering Student",
   university: "Daffodil International University",
-  tagline: "I build practical software projects while exploring web development, animation, and 3D development.",
+  headline:
+    "Software Engineering Student building native macOS systems, 3D simulations, and full-stack web apps.",
+  tagline:
+    "Software Engineering Student at Daffodil International University building native macOS systems, 3D simulations, and full-stack web apps.",
 
-  // About Section Content
+  // Editorial Bio (Two-Column Architectural Narrative)
   bio: [
     "I'm Mohammed Omar, a Software Engineering student at Daffodil International University.",
-    "I learn by building practical projects and exploring web development, software engineering, animation, and 3D development.",
+    "I learn by building practical projects across native systems engineering, computer graphics, and distributed web platforms.",
   ],
 
-  // Personal Details Area
-  personalDetails: {
-    name: "Mohammed Omar",
-    dateOfBirth: "9 November, 2003",
-    phone: "+8801833799480",
-    email: "mohammedomarworks@gmail.com",
-    university: "Daffodil International University",
-    field: "Software Engineering",
+  editorialBio: {
+    column1: [
+      "I am an undergraduate Software Engineering student at Daffodil International University, focused on systems programming, real-time spatial graphics, and robust web applications.",
+      "My engineering philosophy centers on building from first principles. Rather than relying on boilerplate abstractions, I explore the mechanics under the hood—from native AppKit window servers and CoreML acoustic keyword detectors in Swift, to Keplerian trajectory solvers in Godot and WebGL.",
+    ],
+    column2: [
+      "I treat frontend, backend, and native desktop systems as unified engineering disciplines. Every interface requires predictable state, low latency, clean memory boundaries, and accessible human ergonomics.",
+      "Current technical investigations include Metal compute shaders, real-time orbital telemetry synchronization, on-device audio feature extraction, and high-concurrency PostgreSQL data modeling.",
+    ],
+  },
+
+  // Compact Quick Facts
+  quickFacts: {
+    location: "Dhaka, BD",
+    university: "Daffodil International University, B.Sc. SWE",
+    degree: "B.Sc. in Software Engineering",
+    focus: "Full-Stack, 3D WebGL & Native Swift",
   },
 
   interests: [
-    "Web Development",
-    "Software Engineering",
-    "Animation & Motion",
-    "3D Development (Blender)",
+    "Native macOS Systems (Swift / AppKit)",
+    "3D Computer Graphics & Simulation (Godot / WebGL)",
+    "Full-Stack Web Engineering (TypeScript / Next.js)",
+    "On-Device Machine Intelligence (CoreML / Audio DSP)",
   ],
 
   // Direct Contact Details
@@ -70,6 +82,7 @@ export const portfolioData: SiteData = {
       degree: "B.Sc. in Software Engineering",
       period: "Fall 2024 – Summer 2028",
       status: "Current Student",
+      location: "Dhaka, Bangladesh",
     },
     {
       id: "gimc",
@@ -77,6 +90,7 @@ export const portfolioData: SiteData = {
       degree: "Higher Secondary Certificate (HSC)",
       year: "2022",
       gpa: "4.83 / 5.00",
+      location: "Narayanganj, Bangladesh",
     },
     {
       id: "risc",
@@ -84,85 +98,116 @@ export const portfolioData: SiteData = {
       degree: "Secondary School Certificate (SSC)",
       year: "2020",
       gpa: "4.44 / 5.00",
+      location: "Dhaka, Bangladesh",
     },
   ],
 
-  // Skills Categories
+  // Skills Categories (Engineered Specification Structure)
   skillCategories: [
     {
-      title: "Programming Languages",
-      description: "Core languages for software logic and scripting.",
+      id: "native-systems",
+      categoryIndex: "01",
+      title: "Systems & Native Engineering",
+      description: "Low-level system programming, memory-safe architectures, and native macOS desktop runtimes.",
       skills: [
-        { name: "C" },
-        { name: "JavaScript" },
-        { name: "TypeScript" },
+        { name: "Swift", level: "Core" },
+        { name: "C", level: "Core" },
+        { name: "AppKit / SwiftUI", level: "Advanced" },
+        { name: "Unix / POSIX Shell", level: "Core" },
       ],
     },
     {
-      title: "Core Computer Science",
-      description: "Theoretical foundations and algorithmic problem solving.",
+      id: "graphics-3d",
+      categoryIndex: "02",
+      title: "3D Graphics & Simulation",
+      description: "Real-time spatial rendering engines, orbital trajectory math, and interactive WebGL environments.",
       skills: [
-        { name: "Data Structures & Algorithms (DSA)" },
-        { name: "Object-Oriented Programming (OOP)" },
+        { name: "Godot Engine", level: "Core" },
+        { name: "Three.js / React Three Fiber", level: "Core" },
+        { name: "WebGL / GLSL Shaders", level: "Advanced" },
+        { name: "Blender", level: "Active" },
       ],
     },
     {
-      title: "Database",
-      description: "Relational and document data storage, querying, and modeling.",
+      id: "web-frontend",
+      categoryIndex: "03",
+      title: "Frontend & Web Architecture",
+      description: "Type-safe reactive client architecture, server components, and responsive interaction design.",
       skills: [
-        { name: "SQL" },
-        { name: "PostgreSQL" },
-        { name: "MongoDB" },
+        { name: "TypeScript", level: "Core" },
+        { name: "Next.js", level: "Core" },
+        { name: "Tailwind CSS", level: "Core" },
+        { name: "React", level: "Core" },
+        { name: "HTML5 / Canvas API", level: "Core" },
       ],
     },
     {
-      title: "Web Development",
-      description: "Building responsive, modern user interfaces.",
+      id: "backend-data",
+      categoryIndex: "04",
+      title: "Backend & Data Architecture",
+      description: "Relational data modeling, schema indexing, and type-safe server APIs.",
       skills: [
-        { name: "HTML" },
-        { name: "CSS" },
-        { name: "React" },
-        { name: "Next.js" },
-        { name: "Tailwind CSS" },
+        { name: "PostgreSQL", level: "Core" },
+        { name: "Python", level: "Core" },
+        { name: "SQL", level: "Core" },
+        { name: "Data Structures & Algorithms (DSA)", level: "Core" },
+        { name: "Object-Oriented Programming (OOP)", level: "Core" },
       ],
     },
     {
-      title: "Tools",
-      description: "Version control, developer environments, and productivity tools.",
+      id: "machine-intelligence",
+      categoryIndex: "05",
+      title: "Machine Intelligence & Audio DSP",
+      description: "Edge neural network deployment, digital signal processing, and low-latency acoustic inference.",
       skills: [
-        { name: "Git" },
-        { name: "GitHub" },
-        { name: "VS Code" },
-        { name: "Microsoft Word" },
-        { name: "Microsoft PowerPoint" },
-        { name: "Canva" },
+        { name: "CoreML", level: "Core" },
+        { name: "DSP Audio Feature Extraction", level: "Advanced" },
+        { name: "PyTorch / ONNX Runtime", level: "Active" },
+        { name: "Quantization & On-Device Inference", level: "Active" },
       ],
     },
     {
-      title: "AI",
-      description: "AI-assisted development workflows and intelligent productivity tools.",
+      id: "toolchain-infra",
+      categoryIndex: "06",
+      title: "Engineering Toolchain & DevOps",
+      description: "Deterministic version control, automated build systems, and terminal development environments.",
       skills: [
-        { name: "AI-assisted development / AI tools" },
-      ],
-    },
-    {
-      title: "Creative / 3D",
-      description: "Visual modeling, animation, and motion experiments.",
-      skills: [
-        { name: "Blender" },
-        { name: "Animation" },
+        { name: "Git", level: "Core" },
+        { name: "GitHub Workflows", level: "Core" },
+        { name: "Docker", level: "Active" },
+        { name: "VS Code / Xcode", level: "Core" },
       ],
     },
   ],
 
-  // Currently Learning (Continuous student skill development)
+  // Currently Learning (Active Engineering Research Log)
   currentlyLearning: [
-    "Web Development",
-    "Animation",
-    "3D Development",
-    "Software Engineering",
+    {
+      title: "Native macOS AppKit & Metal Shaders",
+      description: "Investigating low-level window composition, Metal compute pipelines, and hardware-accelerated dynamic viewport widgets.",
+      status: "Benchwork",
+      tags: ["Swift", "Metal", "AppKit", "macOS SDK"],
+    },
+    {
+      title: "3D Spatial Mechanics & Orbital Solvers",
+      description: "Modeling n-body gravitational perturbations, Keplerian orbital vectors, and WebGL shader pipelines in Godot and Three.js.",
+      status: "Active Research",
+      tags: ["Godot", "Three.js", "GLSL", "Physics"],
+    },
+    {
+      title: "Edge Audio DSP & Keyword Spotting",
+      description: "Implementing real-time mel-spectrogram transformation pipelines and sub-15ms CoreML acoustic neural inference models.",
+      status: "Prototyping",
+      tags: ["CoreML", "AudioKit", "DSP", "Python"],
+    },
+    {
+      title: "Distributed Data Modeling & Concurrency",
+      description: "Deepening transaction isolation guarantees, PostgreSQL query plan optimization, and lock-free async pipelines.",
+      status: "Studies",
+      tags: ["PostgreSQL", "Systems", "Concurrency", "DSA"],
+    },
   ],
 
-  // Featured Projects (Imported from dedicated projects.ts)
+  // Featured Projects
   projects: projectsData,
 };

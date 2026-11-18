@@ -14,7 +14,7 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>("light");
+  const [theme, setThemeState] = useState<Theme>("dark");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -24,9 +24,9 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       setThemeState(savedTheme);
       applyTheme(savedTheme);
     } else {
-      // Default to light as primary theme per personal creative redesign
-      setThemeState("light");
-      applyTheme("light");
+      // Default to dark high-contrast obsidian systems theme
+      setThemeState("dark");
+      applyTheme("dark");
     }
   }, []);
 

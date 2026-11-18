@@ -6,13 +6,22 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/data/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        obsidian: {
+          DEFAULT: "#09090b",
+          elevated: "#121215",
+          surface: "#18181b",
+          border: "rgba(255, 255, 255, 0.07)",
+        },
         surface: {
+          DEFAULT: "var(--surface-elevated)",
+          elevated: "var(--surface-elevated)",
           50: "var(--surface-50)",
           100: "var(--surface-100)",
           200: "var(--surface-200)",
@@ -25,7 +34,12 @@ const config: Config = {
           DEFAULT: "var(--accent)",
           foreground: "var(--accent-foreground)",
           muted: "var(--accent-muted)",
+          emerald: "#10b981",
+          cyan: "#06b6d4",
         },
+      },
+      borderColor: {
+        hairline: "rgba(255, 255, 255, 0.07)",
       },
       fontFamily: {
         sans: [

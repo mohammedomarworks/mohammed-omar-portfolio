@@ -12,19 +12,24 @@ export interface Project {
   liveUrl?: string;
   liveButtonLabel?: string;
   featured?: boolean;
-  type?: "client" | "personal" | "academic" | string;
+  type?: "flagship" | "client" | "systems" | "simulation" | "academic" | "personal" | string;
   typeLabel?: string;
   category?: string;
   highlight?: string;
+  systemArchitecture?: string[];
+  metrics?: { label: string; value: string }[];
 }
 
 export interface SkillItem {
   name: string;
+  level?: "Core" | "Advanced" | "Active";
   note?: string;
 }
 
 export interface SkillCategory {
+  id: string;
   title: string;
+  categoryIndex: string;
   description: string;
   skills: SkillItem[];
 }
@@ -43,13 +48,11 @@ export interface EducationItem {
   highlights?: string[];
 }
 
-export interface PersonalDetails {
-  name: string;
-  dateOfBirth: string;
-  phone: string;
-  email: string;
+export interface QuickFacts {
+  location: string;
   university: string;
-  field: string;
+  degree: string;
+  focus: string;
 }
 
 export interface SocialLink {
@@ -63,14 +66,24 @@ export interface SiteData {
   name: string;
   title: string;
   university: string;
+  headline: string;
   tagline: string;
   bio: string[];
+  editorialBio: {
+    column1: string[];
+    column2: string[];
+  };
+  quickFacts: QuickFacts;
   interests: string[];
   email: string;
-  personalDetails: PersonalDetails;
   socialLinks: SocialLink[];
   education: EducationItem[];
   skillCategories: SkillCategory[];
-  currentlyLearning: string[];
+  currentlyLearning: {
+    title: string;
+    description: string;
+    status: string;
+    tags: string[];
+  }[];
   projects: Project[];
 }

@@ -33,7 +33,6 @@ export function NetworkBackground({ className = "" }: { className?: string }) {
     let particles: Particle[] = [];
     const mouse = { x: -1000, y: -1000, active: false };
 
-    // Check prefers-reduced-motion
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches;
@@ -51,28 +50,26 @@ export function NetworkBackground({ className = "" }: { className?: string }) {
       canvas.style.height = `${height}px`;
       ctx.scale(dpr, dpr);
 
-      // Initialize particles based on canvas dimensions
-      const particleDensity = width < 768 ? 24 : 52;
+      const particleDensity = width < 768 ? 20 : 42;
       particles = [];
 
       for (let i = 0; i < particleDensity; i++) {
-        // ~18% particles are subtle royal indigo accent particles
-        const isAccent = Math.random() < 0.18;
+        // ~10% are subtle emerald status micro-nodes
+        const isAccent = Math.random() < 0.1;
         particles.push({
           x: Math.random() * width,
           y: Math.random() * height,
-          vx: (Math.random() - 0.5) * (prefersReducedMotion ? 0 : 0.4),
-          vy: (Math.random() - 0.5) * (prefersReducedMotion ? 0 : 0.4),
-          radius: isAccent ? Math.random() * 1.2 + 2 : Math.random() * 1 + 1.5,
+          vx: (Math.random() - 0.5) * (prefersReducedMotion ? 0 : 0.3),
+          vy: (Math.random() - 0.5) * (prefersReducedMotion ? 0 : 0.3),
+          radius: isAccent ? 1.5 : Math.random() * 0.8 + 0.8,
           isAccent,
-          baseAlpha: isAccent ? 0.65 : 0.45,
+          baseAlpha: isAccent ? 0.7 : 0.35,
         });
       }
     };
 
     resize();
 
-    // Mouse interaction for desktop
     const handleMouseMove = (e: MouseEvent) => {
       const rect = canvas.getBoundingClientRect();
       mouse.x = e.clientX - rect.left;
@@ -93,16 +90,25 @@ export function NetworkBackground({ className = "" }: { className?: string }) {
       parent.addEventListener("mouseleave", handleMouseLeave);
     }
 
-    const maxLineDist = 125;
+    const maxLineDist = 130;
     const maxLineDistSq = maxLineDist * maxLineDist;
 
     const render = () => {
-      const width = canvas.width / (Math.min(window.devicePixelRatio || 1, 2));
-      const height = canvas.height / (Math.min(window.devicePixelRatio || 1, 2));
+      const width = canvas.width / Math.min(window.devicePixelRatio || 1, 2);
+      const height = canvas.height / Math.min(window.devicePixelRatio || 1, 2);
 
       ctx.clearRect(0, 0, width, height);
 
-      // Draw connecting lines
+      // Draw subtle engineering grid coordinate dots
+      const gridSpacing = 80;
+      ctx.fillStyle = "rgba(255, 255, 255, 0.02)";
+      for (let gx = gridSpacing; gx < width; gx += gridSpacing) {
+        for (let gy = gridSpacing; gy < height; gy += gridSpacing) {
+          ctx.fillRect(gx - 0.5, gy - 0.5, 1, 1);
+        }
+      }
+
+      // Draw connecting telemetry hairlines
       for (let i = 0; i < particles.length; i++) {
         const p1 = particles[i];
 
@@ -114,30 +120,30 @@ export function NetworkBackground({ className = "" }: { className?: string }) {
 
           if (distSq < maxLineDistSq) {
             const dist = Math.sqrt(distSq);
-            const lineAlpha = (1 - dist / maxLineDist) * 0.18;
+            const lineAlpha = (1 - dist / maxLineDist) * 0.12;
 
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = `rgba(148, 163, 184, ${lineAlpha})`;
-            ctx.lineWidth = 0.9;
+            ctx.strokeStyle = `rgba(255, 255, 255, ${lineAlpha})`;
+            ctx.lineWidth = 0.6;
             ctx.stroke();
           }
         }
 
-        // Mouse connection line
+        // Mouse connection line in subtle emerald
         if (mouse.active) {
           const mdx = p1.x - mouse.x;
           const mdy = p1.y - mouse.y;
           const mDistSq = mdx * mdx + mdy * mdy;
           if (mDistSq < 110 * 110) {
             const mDist = Math.sqrt(mDistSq);
-            const mAlpha = (1 - mDist / 110) * 0.25;
+            const mAlpha = (1 - mDist / 110) * 0.22;
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(mouse.x, mouse.y);
-            ctx.strokeStyle = `rgba(79, 70, 229, ${mAlpha})`;
-            ctx.lineWidth = 1;
+            ctx.strokeStyle = `rgba(16, 185, 129, ${mAlpha})`;
+            ctx.lineWidth = 0.8;
             ctx.stroke();
           }
         }
@@ -147,12 +153,10 @@ export function NetworkBackground({ className = "" }: { className?: string }) {
       for (let i = 0; i < particles.length; i++) {
         const p = particles[i];
 
-        // Movement
         if (!prefersReducedMotion) {
           p.x += p.vx;
           p.y += p.vy;
 
-          // Boundary bounce
           if (p.x <= 0 || p.x >= width) p.vx = -p.vx;
           if (p.y <= 0 || p.y >= height) p.vy = -p.vy;
         }
@@ -161,20 +165,18 @@ export function NetworkBackground({ className = "" }: { className?: string }) {
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
 
         if (p.isAccent) {
-          ctx.fillStyle = `rgba(79, 70, 229, ${p.baseAlpha})`;
+          ctx.fillStyle = `rgba(16, 185, 129, ${p.baseAlpha})`;
         } else {
-          ctx.fillStyle = `rgba(148, 163, 184, ${p.baseAlpha})`;
+          ctx.fillStyle = `rgba(244, 244, 245, ${p.baseAlpha * 0.6})`;
         }
         ctx.fill();
       }
 
-      // Continue loop if motion is enabled
       if (!prefersReducedMotion) {
         animationFrameId = requestAnimationFrame(render);
       }
     };
 
-    // Initial render
     render();
 
     return () => {
@@ -196,7 +198,7 @@ export function NetworkBackground({ className = "" }: { className?: string }) {
     >
       <canvas
         ref={canvasRef}
-        className="block w-full h-full opacity-65 dark:opacity-40 transition-opacity duration-700"
+        className="block w-full h-full opacity-60 transition-opacity duration-700"
       />
     </div>
   );

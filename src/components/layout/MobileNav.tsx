@@ -21,7 +21,6 @@ export function MobileNav({
   links,
   activeSection,
 }: MobileNavProps) {
-  // Close menu when Escape key is pressed
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
@@ -49,47 +48,59 @@ export function MobileNav({
       role="dialog"
       aria-modal="true"
       aria-label="Mobile Navigation Menu"
-      className="fixed inset-0 z-50 md:hidden flex flex-col bg-slate-900/90 backdrop-blur-md"
+      className="fixed inset-0 z-50 md:hidden flex flex-col bg-black/80 backdrop-blur-md"
     >
-      {/* Backdrop overlay dismiss */}
       <div
-        className="absolute inset-0 bg-black/40"
+        className="absolute inset-0"
         onClick={onClose}
         aria-hidden="true"
       />
 
-      <div className="relative z-10 flex flex-col h-full bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 p-6 shadow-2xl">
-        <div className="flex items-center justify-between pb-6 border-b border-slate-200 dark:border-slate-800">
-          <div className="flex items-center gap-1.5 text-slate-900 dark:text-slate-100 font-bold tracking-tight">
-            <span className="text-lg tracking-tight font-extrabold font-mono">OMAR</span>
-            <span className="w-1.5 h-1.5 rounded-full bg-indigo-600 dark:bg-indigo-400" />
+      <div className="relative z-10 flex flex-col h-full bg-[#09090b] border-b border-white/[0.07] p-6 shadow-2xl">
+        <div className="flex items-center justify-between pb-5 border-b border-white/[0.07]">
+          <div className="flex items-center gap-2 text-zinc-100 font-bold tracking-tight">
+            <span className="text-base tracking-tight font-extrabold font-mono text-[#f4f4f5]">OMAR</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+            <span className="font-mono text-[11px] text-zinc-500 uppercase tracking-widest pl-1 border-l border-white/[0.1]">
+              SYS.SWE
+            </span>
           </div>
           <button
             onClick={onClose}
             aria-label="Close navigation menu"
-            className="p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-visible:ring-2 focus-visible:ring-indigo-500"
+            className="p-2 rounded-lg border border-white/[0.07] bg-white/[0.02] text-zinc-400 hover:text-zinc-100 hover:bg-white/[0.06] transition-colors focus-visible:ring-1 focus-visible:ring-emerald-400"
           >
-            <X className="w-5 h-5" />
+            <X className="w-4 h-4" />
           </button>
         </div>
 
         {/* Navigation list */}
-        <nav className="flex-1 py-8">
-          <ul className="flex flex-col space-y-3">
+        <nav className="flex-1 py-8 font-mono text-sm">
+          <ul className="flex flex-col space-y-2">
             {links.map((link) => {
               const isActive = activeSection === link.href.replace("#", "");
               return (
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    onClick={onClose}
-                    className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
+                    onClick={() => {
+                      onClose();
+                      if (link.href === "#hero") {
+                        window.history.replaceState(null, "", window.location.pathname);
+                      } else {
+                        window.history.replaceState(null, "", link.href);
+                      }
+                    }}
+                    className={`flex items-center justify-between px-4 py-3 rounded-lg transition-colors ${
                       isActive
-                        ? "bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400 font-semibold"
-                        : "text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:text-slate-900 dark:hover:text-slate-100"
+                        ? "bg-white/[0.08] text-[#f4f4f5] border border-white/[0.1] font-semibold"
+                        : "text-zinc-400 hover:bg-white/[0.04] hover:text-zinc-100 border border-transparent"
                     }`}
                   >
-                    {link.label}
+                    <span>{link.label}</span>
+                    {isActive && (
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                    )}
                   </a>
                 </li>
               );
@@ -97,8 +108,8 @@ export function MobileNav({
           </ul>
         </nav>
 
-        <div className="pt-6 border-t border-slate-200 dark:border-slate-800 text-xs font-mono text-slate-500 dark:text-slate-400 text-center">
-          Software Engineering • Daffodil International University
+        <div className="pt-5 border-t border-white/[0.07] text-xs font-mono text-zinc-500 text-center">
+          Daffodil International University • B.Sc. Software Engineering
         </div>
       </div>
     </div>

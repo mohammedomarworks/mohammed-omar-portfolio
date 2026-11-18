@@ -3,35 +3,41 @@
 @tailwind utilities;
 
 :root {
-  /* Clean White/Light Theme variables */
+  /* High-contrast monochromatic light theme fallback */
   --background: #ffffff;
-  --foreground: #0f172a;
+  --foreground: #09090b;
   --surface-50: #ffffff;
-  --surface-100: #f8fafc;
-  --surface-200: #f1f5f9;
-  --surface-800: #1e293b;
-  --surface-900: #0f172a;
-  --surface-950: #020617;
-  --border-color: #e2e8f0;
-  --accent: #4f46e5;
+  --surface-100: #f4f4f5;
+  --surface-200: #e4e4e7;
+  --surface-800: #27272a;
+  --surface-900: #18181b;
+  --surface-950: #09090b;
+  --surface-elevated: #f4f4f5;
+  --border-color: rgba(0, 0, 0, 0.08);
+  --border-hairline: rgba(0, 0, 0, 0.08);
+  --accent: #10b981;
+  --accent-cyan: #06b6d4;
   --accent-foreground: #ffffff;
-  --accent-muted: rgba(79, 70, 229, 0.08);
+  --accent-muted: rgba(16, 185, 129, 0.1);
 }
 
 .dark {
-  /* Dark Theme variables */
-  --background: #090d16;
-  --foreground: #f8fafc;
-  --surface-50: #111827;
-  --surface-100: #172033;
-  --surface-200: #1e293b;
-  --surface-800: #111827;
-  --surface-900: #090d16;
-  --surface-950: #030712;
-  --border-color: #1e293b;
-  --accent: #6366f1;
-  --accent-foreground: #ffffff;
-  --accent-muted: rgba(99, 102, 241, 0.15);
+  /* High-contrast monochromatic zinc / obsidian system theme */
+  --background: #09090b;
+  --foreground: #f4f4f5;
+  --surface-50: #121215;
+  --surface-100: #18181b;
+  --surface-200: #27272a;
+  --surface-800: #121215;
+  --surface-900: #09090b;
+  --surface-950: #050507;
+  --surface-elevated: #121215;
+  --border-color: rgba(255, 255, 255, 0.07);
+  --border-hairline: rgba(255, 255, 255, 0.07);
+  --accent: #10b981;
+  --accent-cyan: #06b6d4;
+  --accent-foreground: #09090b;
+  --accent-muted: rgba(16, 185, 129, 0.12);
 }
 
 html {
@@ -49,11 +55,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Accessible focus styling using consistent accent */
+/* Accessible focus styling using subtle accent */
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
-  border-radius: 6px;
+  border-radius: 4px;
 }
 
 /* Accessibility: Respect Reduced Motion */
@@ -71,18 +77,18 @@ body {
   }
 }
 
-/* Subtle scrollbar */
+/* Precision engineered scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(148, 163, 184, 0.25);
-  border-radius: 4px;
+  background: rgba(161, 161, 170, 0.2);
+  border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(148, 163, 184, 0.45);
+  background: rgba(161, 161, 170, 0.35);
 }
