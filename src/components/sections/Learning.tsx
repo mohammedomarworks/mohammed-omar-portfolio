@@ -18,18 +18,18 @@ export function Learning() {
             <div className="flex items-center gap-2 mb-2">
               <Terminal className="w-3.5 h-3.5 text-emerald-400" />
               <span className="font-mono text-xs uppercase tracking-wider text-emerald-500 dark:text-emerald-400 font-semibold">
-                // ACTIVE BENCHWORK &amp; RESEARCH LOG
+                CURRENT FOCUS
               </span>
             </div>
             <h2 className="text-xl sm:text-2xl font-bold font-mono text-zinc-900 dark:text-[#f4f4f5] tracking-tight">
-              Currently Investigating
+              Currently Learning
             </h2>
             <p className="mt-1.5 text-xs sm:text-sm text-zinc-600 dark:text-zinc-400">
-              Active engineering tracks undergoing rapid prototyping, performance profiling, and systems testing.
+              Active areas of practical exploration, coursework extensions, and ongoing skill development.
             </p>
           </div>
 
-          {/* Clean Horizontal Research Rows */}
+          {/* Clean Horizontal Rows */}
           <div className="border-t border-b border-black/[0.08] dark:border-white/[0.08] divide-y divide-black/[0.08] dark:divide-white/[0.08]">
             {portfolioData.currentlyLearning.map((item, idx) => (
               <div
@@ -39,7 +39,7 @@ export function Learning() {
                 {/* Track Index & Title */}
                 <div className="md:col-span-5">
                   <div className="flex items-center gap-2 text-[11px] font-mono text-zinc-500 mb-1">
-                    <span>TRACK_0{idx + 1} //</span>
+                    <span>TRACK 0{idx + 1} //</span>
                     <span className="inline-flex items-center gap-1.5 text-emerald-500 dark:text-emerald-400 font-medium">
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                       {item.status}

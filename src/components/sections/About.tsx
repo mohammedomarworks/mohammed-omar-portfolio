@@ -18,18 +18,18 @@ export function About() {
         <SectionHeader
           index="01"
           label="About"
-          title="Architectural Philosophy & Background"
-          description="Academic foundation, systems-level approach to software development, and technical priorities."
+          title="About Me"
+          description="Software Engineering student focused on native macOS apps, 3D simulations, and full-stack web development."
         />
 
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Two-Column Editorial Bio */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 p-6 sm:p-8 rounded-xl bg-zinc-50 dark:bg-[#121215] border border-black/10 dark:border-white/[0.07] shadow-sm">
-            {/* Column 1: Core Foundation & Trajectory */}
+            {/* Column 1: Background */}
             <div className="space-y-4 text-sm sm:text-base text-zinc-700 dark:text-zinc-300 leading-relaxed font-sans">
               <div className="flex items-center gap-2 mb-1">
                 <span className="font-mono text-xs uppercase tracking-wider text-emerald-500 dark:text-emerald-400 font-semibold">
-                  // ORIGINS &amp; SYSTEMS FOCUS
+                  Background
                 </span>
               </div>
               {editorialBio.column1.map((paragraph, idx) => (
@@ -39,11 +39,11 @@ export function About() {
               ))}
             </div>
 
-            {/* Column 2: Engineering Philosophy */}
+            {/* Column 2: Engineering Focus */}
             <div className="space-y-4 text-sm sm:text-base text-zinc-700 dark:text-zinc-300 leading-relaxed font-sans border-t md:border-t-0 md:border-l border-black/[0.08] dark:border-white/[0.07] pt-6 md:pt-0 md:pl-8">
               <div className="flex items-center gap-2 mb-1">
                 <span className="font-mono text-xs uppercase tracking-wider text-zinc-500 font-semibold">
-                  // METHODOLOGY &amp; RIGOR
+                  Engineering Focus
                 </span>
               </div>
               {editorialBio.column2.map((paragraph, idx) => (
@@ -59,7 +59,7 @@ export function About() {
             <div className="flex items-center gap-2 mb-3 pb-2 border-b border-black/[0.06] dark:border-white/[0.05]">
               <Terminal className="w-3.5 h-3.5 text-emerald-400" />
               <span className="font-mono text-xs uppercase tracking-wider text-zinc-500 font-semibold">
-                SYSTEM TELEMETRY // QUICK FACTS
+                QUICK FACTS
               </span>
             </div>
 

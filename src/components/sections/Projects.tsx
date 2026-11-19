@@ -18,9 +18,9 @@ export function Projects() {
       <Container>
         <SectionHeader
           index="04"
-          label="Engineering Projects"
-          title="Flagship Systems &amp; Deployed Applications"
-          description="Native macOS applications, real-time 3D orbital simulations, and production web client systems."
+          label="Projects"
+          title="Featured Projects"
+          description="Native macOS applications, 3D simulations, and production web client applications."
         />
 
         {/* Flagship Projects Stack */}
@@ -39,7 +39,7 @@ export function Projects() {
           <div>
             <div className="flex items-center gap-3 mb-6">
               <span className="text-xs font-mono font-semibold uppercase tracking-wider text-zinc-500">
-                // ADDITIONAL SYSTEMS &amp; EXPERIMENTS
+                // ADDITIONAL PROJECTS
               </span>
               <div className="h-px flex-1 bg-black/[0.08] dark:bg-white/[0.07]" />
             </div>

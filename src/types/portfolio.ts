@@ -16,8 +16,6 @@ export interface Project {
   typeLabel?: string;
   category?: string;
   highlight?: string;
-  systemArchitecture?: string[];
-  metrics?: { label: string; value: string }[];
 }
 
 export interface SkillItem {

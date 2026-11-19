@@ -127,9 +127,6 @@ export function Navbar() {
                 OMAR
               </span>
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-              <span className="hidden sm:inline-block font-mono text-[11px] text-zinc-500 uppercase tracking-widest pl-1 border-l border-white/[0.1]">
-                SYS.SWE
-              </span>
             </a>
 
             {/* Desktop Navigation Links */}

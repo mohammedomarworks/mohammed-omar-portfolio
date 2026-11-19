@@ -32,14 +32,14 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-8 lg:gap-x-12 items-center">
           {/* Left Column: Text & Actions */}
           <div className="lg:col-span-7">
-            {/* Engineering Status Chip */}
-            <div className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-md text-xs font-mono bg-black/[0.03] dark:bg-white/[0.03] text-zinc-700 dark:text-zinc-300 border border-black/10 dark:border-white/[0.08] mb-5">
+            {/* Location Status Chip */}
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-xs font-mono bg-black/[0.03] dark:bg-white/[0.03] text-zinc-700 dark:text-zinc-300 border border-black/10 dark:border-white/[0.08] mb-5">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
               </span>
-              <span className="text-[11px] uppercase tracking-wider text-zinc-600 dark:text-zinc-400">
-                ACTIVE BENCHWORK // DHAKA, BD
+              <span className="text-[11px] text-zinc-600 dark:text-zinc-400">
+                Dhaka, Bangladesh
               </span>
             </div>
 
@@ -72,7 +72,7 @@ export function Hero() {
                 href="#about"
                 className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-xs sm:text-sm font-medium text-zinc-700 dark:text-zinc-300 bg-black/[0.02] dark:bg-white/[0.03] hover:bg-black/[0.05] dark:hover:bg-white/[0.07] border border-black/10 dark:border-white/[0.08] transition-all duration-150 focus-visible:ring-1 focus-visible:ring-emerald-400"
               >
-                <span>Architectural Overview</span>
+                <span>About Me</span>
               </a>
 
               <a
@@ -90,7 +90,7 @@ export function Hero() {
             <div className="mt-8 pt-5 border-t border-black/[0.08] dark:border-white/[0.07]">
               <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                 <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-500 font-semibold mr-1">
-                  Channels:
+                  Links:
                 </span>
 
                 <a
@@ -127,20 +127,11 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right Column: Precision Framed Portrait */}
+          {/* Right Column: Framed Portrait */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
             <div className="w-full max-w-[280px] sm:max-w-[310px] lg:max-w-[330px]">
-              {/* Engineering Instrument Frame */}
+              {/* Clean Dark Frame */}
               <div className="rounded-xl bg-zinc-100 dark:bg-[#121215] p-2.5 border border-black/10 dark:border-white/[0.08] shadow-xl shadow-black/20">
-                {/* Frame Header Telemetry */}
-                <div className="flex items-center justify-between pb-2 px-1 text-[10px] font-mono text-zinc-500 uppercase tracking-wider border-b border-black/[0.06] dark:border-white/[0.05] mb-2.5">
-                  <span className="flex items-center gap-1">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                    <span>SYS_ID: MO-SWE-24</span>
-                  </span>
-                  <span>DHAKA // 23.81° N</span>
-                </div>
-
                 {/* Portrait Aspect Ratio */}
                 <div className="relative aspect-[3/4] w-full rounded-lg overflow-hidden bg-zinc-200 dark:bg-zinc-900 border border-black/10 dark:border-white/[0.05]">
                   <Image
@@ -157,7 +148,7 @@ export function Hero() {
                 {/* Status Readout Footer */}
                 <div className="mt-2.5 px-2.5 py-1.5 rounded-md bg-black/[0.03] dark:bg-white/[0.02] border border-black/[0.06] dark:border-white/[0.05] flex items-center justify-between font-mono text-[11px]">
                   <span className="text-zinc-600 dark:text-zinc-400">
-                    Daffodil Int. University
+                    Daffodil International University
                   </span>
                   <span className="text-emerald-500 dark:text-emerald-400 font-semibold text-[10px] uppercase tracking-wider">
                     B.Sc. SWE

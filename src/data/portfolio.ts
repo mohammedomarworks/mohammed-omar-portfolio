@@ -18,20 +18,20 @@ export const portfolioData: SiteData = {
   tagline:
     "Software Engineering Student at Daffodil International University building native macOS systems, 3D simulations, and full-stack web apps.",
 
-  // Editorial Bio (Two-Column Architectural Narrative)
+  // Editorial Bio (Two-Column Narrative)
   bio: [
     "I'm Mohammed Omar, a Software Engineering student at Daffodil International University.",
-    "I learn by building practical projects across native systems engineering, computer graphics, and distributed web platforms.",
+    "I build practical projects across native macOS development, 3D simulations, and full-stack web applications.",
   ],
 
   editorialBio: {
     column1: [
-      "I am an undergraduate Software Engineering student at Daffodil International University, focused on systems programming, real-time spatial graphics, and robust web applications.",
-      "My engineering philosophy centers on building from first principles. Rather than relying on boilerplate abstractions, I explore the mechanics under the hood—from native AppKit window servers and CoreML acoustic keyword detectors in Swift, to Keplerian trajectory solvers in Godot and WebGL.",
+      "I am an undergraduate Software Engineering student at Daffodil International University with a passion for building native desktop tools, interactive 3D simulations, and modern web applications.",
+      "I focus on hands-on software development across the stack—writing native macOS utilities with Swift, AppKit, and SwiftUI, creating cooperative 3D simulations in Godot and WebGL, and crafting responsive web apps with TypeScript and Next.js.",
     ],
     column2: [
-      "I treat frontend, backend, and native desktop systems as unified engineering disciplines. Every interface requires predictable state, low latency, clean memory boundaries, and accessible human ergonomics.",
-      "Current technical investigations include Metal compute shaders, real-time orbital telemetry synchronization, on-device audio feature extraction, and high-concurrency PostgreSQL data modeling.",
+      "My approach to engineering emphasizes clean project structure, thoughtful user experience, and practical problem-solving. I value writing maintainable code with clear boundaries and responsive interfaces.",
+      "Currently expanding my knowledge in on-device CoreML integrations for voice triggers, real-time 3D physics and rendering in Godot, and relational database design with PostgreSQL.",
     ],
   },
 
@@ -180,31 +180,31 @@ export const portfolioData: SiteData = {
     },
   ],
 
-  // Currently Learning (Active Engineering Research Log)
+  // Currently Learning (Active Focus)
   currentlyLearning: [
     {
-      title: "Native macOS AppKit & Metal Shaders",
-      description: "Investigating low-level window composition, Metal compute pipelines, and hardware-accelerated dynamic viewport widgets.",
-      status: "Benchwork",
-      tags: ["Swift", "Metal", "AppKit", "macOS SDK"],
+      title: "Native macOS Development",
+      description: "AppKit, SwiftUI, custom floating window management, and CoreML voice command triggers.",
+      status: "In Progress",
+      tags: ["Swift", "SwiftUI", "AppKit", "CoreML"],
     },
     {
-      title: "3D Spatial Mechanics & Orbital Solvers",
-      description: "Modeling n-body gravitational perturbations, Keplerian orbital vectors, and WebGL shader pipelines in Godot and Three.js.",
-      status: "Active Research",
-      tags: ["Godot", "Three.js", "GLSL", "Physics"],
+      title: "3D Game & WebGL Development",
+      description: "Godot Engine physics, scene lighting, spatial asset design, and browser WebGL optimization.",
+      status: "In Progress",
+      tags: ["Godot Engine", "GDScript", "WebGL", "Three.js"],
     },
     {
-      title: "Edge Audio DSP & Keyword Spotting",
-      description: "Implementing real-time mel-spectrogram transformation pipelines and sub-15ms CoreML acoustic neural inference models.",
-      status: "Prototyping",
-      tags: ["CoreML", "AudioKit", "DSP", "Python"],
+      title: "Full-Stack Web Architecture",
+      description: "Next.js, TypeScript, responsive client design, REST APIs, and PostgreSQL schema design.",
+      status: "In Progress",
+      tags: ["Next.js", "TypeScript", "REST APIs", "PostgreSQL"],
     },
     {
-      title: "Distributed Data Modeling & Concurrency",
-      description: "Deepening transaction isolation guarantees, PostgreSQL query plan optimization, and lock-free async pipelines.",
-      status: "Studies",
-      tags: ["PostgreSQL", "Systems", "Concurrency", "DSA"],
+      title: "Software Engineering Fundamentals",
+      description: "Object-oriented design patterns, automated QA and testing workflows, and algorithmic data structures.",
+      status: "In Progress",
+      tags: ["Design Patterns", "Testing", "DSA", "Git"],
     },
   ],
 

@@ -15,9 +15,9 @@ export function Skills() {
       <Container>
         <SectionHeader
           index="02"
-          label="Skills &amp; Architecture"
-          title="Technical Competencies &amp; System Stack"
-          description="Engineered breakdown of systems programming, 3D spatial simulation, reactive web engineering, and machine intelligence runtimes."
+          label="Skills &amp; Tech Stack"
+          title="Skills &amp; Tech Stack"
+          description="Core technologies, languages, and frameworks used across native systems, 3D graphics, and full-stack web applications."
         />
 
         {/* Asymmetric Typographic Specification Table / Horizontal Category Rows */}

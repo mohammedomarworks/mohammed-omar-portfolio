@@ -45,9 +45,6 @@ export function Footer() {
             >
               <span className="text-base tracking-tight font-extrabold font-mono">OMAR</span>
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-              <span className="font-mono text-[11px] text-zinc-500 uppercase tracking-widest pl-1 border-l border-white/[0.1]">
-                SYS.PORTFOLIO
-              </span>
             </a>
             <p className="text-xs font-mono text-zinc-500 mt-0.5">
               Software Engineering Student • Daffodil International University
@@ -99,9 +96,6 @@ export function Footer() {
         {/* Clean Minimal Colophon Typography */}
         <div className="mt-8 pt-6 border-t border-black/[0.06] dark:border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-mono text-zinc-500">
           <p>Designed &amp; engineered by Mohammed Omar — Dhaka, 2026</p>
-          <p className="text-zinc-500 dark:text-zinc-600">
-            Obsidian Surface // Monochromatic Systems Theme
-          </p>
         </div>
       </Container>
     </footer>

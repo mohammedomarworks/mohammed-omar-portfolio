@@ -31,9 +31,9 @@ export function Contact() {
       <Container>
         <SectionHeader
           index="05"
-          label="Contact &amp; Coordinates"
-          title="Direct Communication Channels"
-          description="Available for software engineering opportunities, systems research, and technical collaboration."
+          label="Contact"
+          title="Get in Touch"
+          description="Feel free to reach out for software engineering opportunities, collaborative projects, or questions."
         />
 
         <div className="max-w-3xl mx-auto">
